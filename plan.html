@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>HomePage</title>
+<style type="text/css">
+<!--
+/*----------------------------
+タグheader, li, ul, ul liは
+https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
+positionをabsoluteからflexに変更
+----------------------------*/
+#header{
+    z-index: 10;
+    height: 90px;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.913);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #666;
+    padding:10px;
+}
+nav ul li.current a,
+nav ul li a:hover{
+    /*-webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);*/
+    background-color: rgb(255, 255, 255);
+}
+
+.home{
+    width: 100vw ;
+    top: 90px;
+}
+
+/*アニメーション要素のスタイル*/
+.animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 1s;
+	transform: translateY(30px);
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+-->
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(window).on('load scroll',function (){
+            $('.animation').each(function(){
+                //ターゲットの位置を取得
+                var target = $(this).offset().top;
+                //スクロール量を取得
+                var scroll = $(window).scrollTop();
+                //ウィンドウの高さを取得
+                var height = $(window).height();
+                //ターゲットまでスクロールするとフェードインする
+                if (scroll > target - height){
+                    //クラスを付与
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+
+    /*https://coco-factory.jp/ugokuweb/move01/5-1-5/から引用*/
+    //スクロールすると上部に固定させるための設定を関数でまとめる
+    function FixedAnime() {
+    	var headerH = $('#header').outerHeight(true);
+    	var scroll = $(window).scrollTop();
+    	if (scroll >= headerH){//headerの高さ以上になったら
+    			$('#header').addClass('fixed');//fixedというクラス名を付与
+    		}else{//それ以外は
+    			$('#header').removeClass('fixed');//fixedというクラス名を除去
+    		}
+    }
+
+    // 画面をスクロールをしたら動かしたい場合の記述
+    $(window).scroll(function () {
+    	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+    });
+
+    // ページが読み込まれたらすぐに動かしたい場合の記述
+    $(window).on('load', function () {
+    	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+    });
+
+</script>
+<header id="header">
+<nav>
+<ul>
+    <li><a href = "homepage.html"><img src="/logo.png" width = 50px></a></li>
+    <li><a href="">旅館について</a></li>
+    <li><a href="">料理</a></li>
+    <li><a href="">施設</a></li>
+    <li><a href="">プラン</a></li>
+    <li><a href="">アクセス</a></li>
+    <li><a href="/reservation.html">予約</a></li>
+    <li><a href="login.html">ログイン</a></li>
+</ul>
+</nav>
+</header>
