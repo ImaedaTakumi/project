@@ -64,3 +64,17 @@ nav ul li a:hover{
 	visibility: visible;
 	transform: translateY(0);
 }
+
+.dish img{
+    width: 50%;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left{
+    display: flex;
+    justify-content: space-between;
+}
