@@ -1,0 +1,66 @@
+/*----------------------------
+タグheader, li, ul, ul liは
+https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
+positionをabsoluteからflexに変更
+----------------------------*/
+#header{
+    z-index: 10;
+    height: 90px;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.913);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #666;
+    padding:10px;
+}
+nav ul li.current a,
+nav ul li a:hover{
+    /*-webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);*/
+    background-color: rgb(255, 255, 255);
+}
+
+.home{
+    width: 100vw ;
+    top: 90px;
+}
+
+/*アニメーション要素のスタイル*/
+.animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 1s;
+	transform: translateY(30px);
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
