@@ -65,13 +65,13 @@ nav ul li a:hover{
 	transform: translateY(0);
 }
 
-.dish img{
-    width: 50%;
-}
 
+
+
+/*画像の位置調整*/
 .right{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .left{
@@ -79,6 +79,23 @@ nav ul li a:hover{
     justify-content: space-between;
 }
 
+/*右側に文字を調節*/
+.right_side{
+    text-align: right;
+    margin-right: 150px;
+}
+
+/*料理*/
+.dish img{
+    width: 50%;
+}
+
+/*プラン*/
+.plan img{
+    width: 50%;
+}
+
+/*アクセス*/
 .access{
     text-align: center;
 }
