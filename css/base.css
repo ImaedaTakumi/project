@@ -100,3 +100,8 @@ nav ul li a:hover{
 .access{
     text-align: center;
 }
+
+/*予約成功*/
+.reservation_success{
+    text-align: center;
+}
