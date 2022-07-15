@@ -27,45 +27,6 @@ def connection_MySQL(sql,type,db):
 		connection.close()
 		return result
 		
-def loginWindow(error=""):
-	loginText = '''
-		<!DOCTYPE html>
-		<html lang="ja">
-		<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>login</title>
-		<style type="text/css">
-		h1 { color: green }
-		strong { color: blue; font-size: large }
-		em { font-style: italic 
-		</style>
-		</head>
-		<body>
-		<h1>私のホテル</h1>
-		<p>
-		アカウント作成
-		</p>
-		<form action="./adduser.cgi" method="post"><div>
-		メールアドレス:<input type="text" name="mail_address"><br>
-		パスワード:<input type="password" name="password"><br>
-		パスワード再確認<input type="password" name="password_conf"><br>
-		氏名<input type="text" name="user_name"><br>
-		住所<input type="text" name="home_address"><br>
-		性別<input type="text" name="gender"><br>
-		生年月日<input type="text" name="birth_date"><br>
-		creditID<input type="text" name="credit_id"><br>
-		<input type="submit" name="submit" value="アカウント作成">
-		<input type="reset" value="リセット">
-		</div></form>
-		<hr>
-		%s
-		</body>
-		</html>
-		'''%(error)
-	print(loginText.encode("utf-8", 'ignore').decode('utf-8'))
-
-	
-		
 ### main program ###
 import crypt
 error = {}
@@ -83,7 +44,9 @@ credit_id = form.getfirst('credit_id')
 
 if form.list == []:
 	#GET
-	loginWindow()
+	with open("../html/adduser.cgi",mode="r",encoding="utf-8") as html:
+		print("Content-Type: text/html\n")
+		print(html.read())
 else:
 	#POST
 	if not mail_address:
@@ -121,4 +84,6 @@ else:
 			print("Location:http://192.168.42.128\n")
 		print("Location:http://192.168.42.128\n")
 	else:
-		loginWindow(error)
+		with open("../html/adduser.cgi",mode="r",encoding="utf-8") as html:
+			print("Content-Type: text/html\n")
+			print(html.read())
