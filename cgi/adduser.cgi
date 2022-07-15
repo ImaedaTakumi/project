@@ -115,8 +115,8 @@ else:
 			gender = 0
 		# ユーザ登録
 		try:
-		sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birth_date}','{credit_id}')"
-		connection_MySQL(sql,"w","hotel")
+			sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birth_date}','{credit_id}')"
+			connection_MySQL(sql,"w","hotel")
 		except:
 			print("Location:http://192.168.42.128\n")
 		print("Location:http://192.168.42.128\n")
