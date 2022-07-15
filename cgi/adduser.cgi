@@ -39,7 +39,7 @@ password_conf = form.getfirst('password_conf')
 user_name = form.getfirst('user_name')
 home_address = form.getfirst('home_address')
 gender = form.getfirst('gender')
-birth_date = form.getfirst('birth_date')
+birthday = form.getfirst('birthday')
 credit_id = form.getfirst('creditID')
 
 if form.list == []:
@@ -62,12 +62,12 @@ else:
 		error["home_address"] = "住所を入力してください"
 	if not gender:
 		error["gender"] = "性別を選択してください"
-	if not birth_date:
-		error["birth_date"] = "生年月日を選択してください"
+	if not birthday:
+		error["birthday"] = "生年月日を選択してください"
 	if not credit_id:
 		credit_id = None
 	elif credit_id.isdigit():
-		error["credit_id"] = "クレジットカードIDには数字のみを入力してください"
+		error["creditID"] = "クレジットカードIDには数字のみを入力してください"
 		
 
 	#一つも入力漏れがない時
@@ -78,7 +78,7 @@ else:
 			gender = 0
 		# ユーザ登録
 		try:
-			sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birth_date}','{credit_id}')"
+			sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birthday}','{credit_id}')"
 			connection_MySQL(sql,"w","hotel")
 		except:
 			print("Location:http://192.168.42.128\n")
