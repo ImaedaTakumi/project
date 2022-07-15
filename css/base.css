@@ -58,6 +58,7 @@ nav ul li a:hover{
 	visibility: hidden;
 	transition: 1s;
 	transform: translateY(30px);
+    text-align: center;
 }
 /*アニメーション要素までスクロールした時のスタイル*/
 .active{
@@ -65,9 +66,6 @@ nav ul li a:hover{
 	visibility: visible;
 	transform: translateY(0);
 }
-
-
-
 
 /*画像の位置調整*/
 .right{
@@ -86,14 +84,64 @@ nav ul li a:hover{
     margin-right: 150px;
 }
 
+/*旅館について*/
+.about1{
+    width: 100vw ;
+    top: 90px;
+}
+
+.about2{
+    vertical-align: -10px;
+}
+
+.about2 img{
+    width: 50%;
+}
+
 /*料理*/
 .dish img{
+    width: 50%;
+}
+/*施設*/
+.institution img{
     width: 50%;
 }
 
 /*プラン*/
 .plan img{
     width: 50%;
+}
+
+.display-block{
+    display: block;
+    float: center;
+    justify-content: center;
+    
+}
+
+.display-flex-left{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 50px;
+    
+}
+
+.display-flex-right{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 150px;
+}
+
+.top_size{
+    font-size: 30px;
+}
+
+.text_size{
+    font-size: 20px;
 }
 
 /*アクセス*/
@@ -104,4 +152,15 @@ nav ul li a:hover{
 /*予約成功*/
 .reservation_success{
     text-align: center;
+}
+
+/*ログイン*/
+.login{
+    text-align:  center;
+	table-layout: fixed;
+	width: 80%;
+	margin: 0 auto 20px;
+    border: 1px solid #ccc;
+	padding: 10px 15px;
+	word-break: break-all;
 }
