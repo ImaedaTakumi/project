@@ -61,7 +61,7 @@ else:
 			session_key = get_random_str(64)
 			sql = f"insert into Session (`Session_id`, Session_key, `Account_id`) values ('null','{session_key}','{account_id}')"
 			connection_MySQL(sql,"w","hotel")
-			print("Location:./loginsuccess.cgi\n")
+			print("Location:./login_success.cgi\n")
 		else:
 			#login failed
 			with open("../html/login.html",mode="r",encoding="utf-8") as html:

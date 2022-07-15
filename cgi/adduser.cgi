@@ -82,7 +82,7 @@ else:
 			connection_MySQL(sql,"w","hotel")
 		except:
 			print("Location:http://192.168.42.128\n")
-		print("Location:./addsuccess.cgi\n")
+		print("Location:./add_success.cgi\n")
 	else:
 		with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
 			print("Content-Type: text/html\n")
