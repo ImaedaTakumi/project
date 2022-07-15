@@ -84,7 +84,16 @@ nav ul li a:hover{
 }
 
 /*旅館について*/
-.about img{
+.about1{
+    width: 100vw ;
+    top: 90px;
+}
+
+.about2{
+    vertical-align: -10px;
+}
+
+.about2 img{
     width: 50%;
 }
 
