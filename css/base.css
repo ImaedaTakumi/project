@@ -139,3 +139,7 @@ nav ul li a:hover{
 	padding: 10px 15px;
 	word-break: break-all;
 }
+/*予約成功*/
+.reservation_success{
+    text-align: center;
+}
