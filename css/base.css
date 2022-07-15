@@ -112,6 +112,18 @@ nav ul li a:hover{
     width: 50%;
 }
 
+.display-block{
+    display: block;
+    float: center;
+    justify-content: center;
+}
+
+.display-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
 /*アクセス*/
 .access{
     text-align: center;
