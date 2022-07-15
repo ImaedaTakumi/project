@@ -59,7 +59,7 @@ else:
 			#login success
 			account_id = result[0]
 			session_key = get_random_str(64)
-			sql = f"insert into Session (`Session_id`, Session_key, `Account_id`) values ('null','{session_key}','{account_id}')"
+			sql = f"insert into Session (`Session_id`, Session_key, `Account_id`) values ('null','{session_key}',{account_id})"
 			connection_MySQL(sql,"w","hotel")
 			print("Location:./login_success.cgi\n")
 		else:
