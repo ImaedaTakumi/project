@@ -57,6 +57,7 @@ nav ul li a:hover{
 	visibility: hidden;
 	transition: 1s;
 	transform: translateY(30px);
+    text-align: center;
 }
 /*アニメーション要素までスクロールした時のスタイル*/
 .active{
@@ -64,9 +65,6 @@ nav ul li a:hover{
 	visibility: visible;
 	transform: translateY(0);
 }
-
-
-
 
 /*画像の位置調整*/
 .right{
@@ -83,6 +81,11 @@ nav ul li a:hover{
 .right_side{
     text-align: right;
     margin-right: 150px;
+}
+
+/*旅館について*/
+.about img{
+    width: 50%;
 }
 
 /*料理*/
