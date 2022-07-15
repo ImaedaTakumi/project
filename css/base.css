@@ -149,6 +149,11 @@ nav ul li a:hover{
     text-align: center;
 }
 
+/*予約成功*/
+.reservation_success{
+    text-align: center;
+}
+
 /*ログイン*/
 .login{
     text-align:  center;

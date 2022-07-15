@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>Reservation</title>
+<title>予約完了</title>
 <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
@@ -20,27 +20,15 @@
 </ul>
 </nav>
 </header>
-<form action="reservation_.html" >
-<p>日時</p>
-<input type="date" name="day">
-<p>大人</p>
-<input type="number" name="adult">
-<p>小人</p>
-<input type="number" name="child">
-<p>部屋</p>
-
-<p>お食事</p>
-<input type="radio" name="dish">お料理A
-<input type="radio" name="dish">お料理B
-<input type="radio" name="dish">お料理C
-<input type="radio" name="dish">お料理D
-<p>お支払い方法の確認</p>
-<input type="radio" name="pay">現金
-<input type="radio" name="pay">クレジット
-<p>お問い合わせ</p>
-<textarea name="security_hole" rows="10"></textarea>
-<button type="submit">予約情報の確定</button>
-</form>
+<div class="reservation_success">
+<h1>以下の内容でご予約が完了しました。</h1>
+</div>
+<p>大人？名様</p>
+<P>子ども？名様</P>
+<p>日時：</p>
+<p>プラン：</p>
+<p>お食事：</p>
+<p>料金：</p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>
