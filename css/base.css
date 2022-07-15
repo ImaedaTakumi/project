@@ -89,6 +89,10 @@ nav ul li a:hover{
 .dish img{
     width: 50%;
 }
+/*施設*/
+.institution img{
+    width: 50%;
+}
 
 /*プラン*/
 .plan img{
