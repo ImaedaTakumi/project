@@ -40,7 +40,7 @@ user_name = form.getfirst('user_name')
 home_address = form.getfirst('home_address')
 gender = form.getfirst('gender')
 birth_date = form.getfirst('birth_date')
-credit_id = form.getfirst('credit_id')
+credit_id = form.getfirst('creditID')
 
 if form.list == []:
 	#GET
@@ -66,7 +66,7 @@ else:
 		error["birth_date"] = "生年月日を選択してください"
 	if not credit_id:
 		credit_id = None
-	if credit_id.isdigit():
+	elif credit_id.isdigit():
 		error["credit_id"] = "クレジットカードIDには数字のみを入力してください"
 		
 
@@ -82,7 +82,7 @@ else:
 			connection_MySQL(sql,"w","hotel")
 		except:
 			print("Location:http://192.168.42.128\n")
-		print("Location:http://192.168.42.128\n")
+		print("Location:./addsuccess.cgi\n")
 	else:
 		with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
 			print("Content-Type: text/html\n")
