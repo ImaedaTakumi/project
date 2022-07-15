@@ -26,6 +26,11 @@ def connection_MySQL(sql,type,db):
 		result = cursor.fetchall()
 		connection.close()
 		return result
+
+def htmlpage(page,text=""):
+	with open(page,mode="r",encoding="utf-8") as html:
+		print("Content-Type: text/html\n")
+		print(html.read()%text)
 		
 ### main program ###
 import crypt
@@ -84,6 +89,4 @@ else:
 			print("Location:http://192.168.42.128\n")
 		print("Location:./add_success.cgi\n")
 	else:
-		with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
-			print("Content-Type: text/html\n")
-			print(html.read())
+		htmlpage("../html/adduser.html",error)
