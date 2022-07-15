@@ -43,6 +43,7 @@ nav ul li a:hover{
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);*/
+    color:rgba(243, 14, 14, 0.25);
     background-color: rgb(255, 255, 255);
 }
 
@@ -84,7 +85,16 @@ nav ul li a:hover{
 }
 
 /*旅館について*/
-.about img{
+.about1{
+    width: 100vw ;
+    top: 90px;
+}
+
+.about2{
+    vertical-align: -10px;
+}
+
+.about2 img{
     width: 50%;
 }
 
@@ -109,10 +119,6 @@ nav ul li a:hover{
 
 /*ログイン*/
 .login{
-    text-align:  center;
-}
-
-.ta1 {
     text-align:  center;
 	table-layout: fixed;
 	width: 80%;
