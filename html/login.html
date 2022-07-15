@@ -20,14 +20,22 @@
 </ul>
 </nav>
 </header>
-<form action="login.html" method="post">
-<p>ユーザー名</p>
-<input id="user_id" name="user_name" type="text">
-<p>パスワード</p>
-<input id="password" name="password" type="password">
-<button type="submit">ログイン</button>
+<br>
+<form class = "login" action="login.html" method="post">
+<table class="ta1">
+<tr>
+<th>ユーザー名</th>
+<td><input id="user_id" name="user_name" type="text"></td>
+</tr>
+<tr>
+<th>パスワード</th>
+<td><input id="password" name="password" type="password"></td>
+</tr>
+</table>
+<button class = "login" type="submit">ログイン</button>
 </form>
-<a href="adduser.html">アカウントをお持ちでない方はこちら</a>
+<br>
+<a class = "login" href="adduser.html">アカウントをお持ちでない方はこちら</a>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>
