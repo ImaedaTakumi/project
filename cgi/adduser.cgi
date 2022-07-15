@@ -44,7 +44,7 @@ credit_id = form.getfirst('credit_id')
 
 if form.list == []:
 	#GET
-	with open("../html/adduser.cgi",mode="r",encoding="utf-8") as html:
+	with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
 		print("Content-Type: text/html\n")
 		print(html.read())
 else:
@@ -84,6 +84,6 @@ else:
 			print("Location:http://192.168.42.128\n")
 		print("Location:http://192.168.42.128\n")
 	else:
-		with open("../html/adduser.cgi",mode="r",encoding="utf-8") as html:
+		with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
 			print("Content-Type: text/html\n")
 			print(html.read())
