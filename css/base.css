@@ -3,24 +3,35 @@
 https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
 positionをabsoluteからflexに変更
 ----------------------------*/
-#header{
+
+#abs_header{
+    position: relative;
     z-index: 10;
-    height: 90px;
+    height: 100px;
     display: flex;
     top: 0px;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.913);
+    background-color: rgba(255, 255, 255, 0);
     width: 100%;
     text-align: center;
     z-index: 2;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-#header.fixed{
+#rel_header{
 	position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/
-    top:0;/*位置指定*/
-    left:0;/*位置指定*/
+    height: 100px;
+    display: flex;
+    top: -100px;
+    background-color: rgba(255, 255, 255, 0.6);/*背景を透過した白に変更*/
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+#rel_header.is-show{
+    top: 0px;
 }
 
 nav ul{
@@ -29,24 +40,25 @@ nav ul{
     justify-content: center;
 }
 
-nav ul li a{
+#abs_a{
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 2vw;
     display: block;
     text-decoration: none;
-    color: #666;
-    padding:10px;
-}
-nav ul li.current a,
-nav ul li a:hover{
-    /*-webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    transform: scale(1, 1);*/
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding:30px;
 }
 
 /*アニメーション要素のスタイル*/
+#rel_a{
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding:30px;
+}
+
+/*アニメーション*/
 .animation{
     text-align: center;
 	opacity : 0;
@@ -54,7 +66,35 @@ nav ul li a:hover{
 	transition: 1s;
 	transform: translateY(30px);
 }
-/*アニメーション要素までスクロールした時のスタイル*/
+.animation_before1{
+    opacity : 0;
+    line-height: 1em;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+.animation_before2{
+    opacity : 0;
+    line-height: 1em;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+.animation_before3{
+    opacity : 0;
+    line-height: 1em;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+.animation_before4{
+    opacity : 0;
+    line-height: 1em;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+
 .active{
 	opacity: 1;
 	visibility: visible;
@@ -100,13 +140,65 @@ nav ul li a:hover{
 .dish img{
     width: 50%;
 }
+/*施設*/
+.institution img{
+    width: 50%;
+}
 
 /*プラン*/
 .plan img{
     width: 50%;
 }
 
+.display-block{
+    display: block;
+    float: center;
+    justify-content: center;
+    
+}
+
+.display-flex-left{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 50px;
+    
+}
+
+.display-flex-right{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 150px;
+}
+
+.top_size{
+    font-size: 30px;
+}
+
+.text_size{
+    font-size: 20px;
+}
+
 /*アクセス*/
 .access{
     text-align: center;
+}
+
+/*予約成功*/
+.reservation_success{
+    text-align: center;
+}
+
+/*ログイン*/
+.login{
+    text-align:  center;
+	table-layout: fixed;
+	width: 80%;
+	margin: 0 auto 20px;
+    border: 1px solid #ccc;
+	padding: 10px 15px;
+	word-break: break-all;
 }

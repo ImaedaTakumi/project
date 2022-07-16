@@ -9,38 +9,56 @@
 <header id="header">
 <nav>
 <ul>
-    <li><a href="homepage.html"><img src="../img/logo.png" width = 50px></a></li>
-    <li><a href="about.html">旅館について</a></li>
-    <li><a href="dish.html">料理</a></li>
-    <li><a href="institution.html">施設</a></li>
-    <li><a href="plan.html">プラン</a></li>
-    <li><a href="access.html">アクセス</a></li>
-    <li><a href="reservation.html">予約</a></li>
-    <li><a href="login.html">ログイン</a></li>
+    <li><a href="../cgi/homepage.cgi"><img src="../img/logo1.png" width = 50px></a></li>
+    <li><a href="../cgi/about.cgi">旅館について</a></li>
+    <li><a href="../cgi/dish.cgi">料理</a></li>
+    <li><a href="../cgi/institution.cgi">施設</a></li>
+    <li><a href="../cgi/plan.cgi">プラン</a></li>
+    <li><a href="../cgi/access.cgi">アクセス</a></li>
+    <li><a href="../cgi/reservation.cgi">予約</a></li>
+    <li><a href="../cgi/login.cgi">ログイン</a></li>
+    {0[0]}
 </ul>
 </nav>
 </header>
 <div class = "plan">
-    <h3>ベーシックプラン</h3>
-    <p class = "right">
-    定員<br>
-    料金<br>
-    広さ
-    <img src="../img/dish1.png">
-    </p>
-    <h3 class = "right_side">紅葉プラン</h3>
-    <p class = "left"><img src="../img/dish2.png">
-    定員<br>
-    料金<br>
-    広さ
-    </p>
-    <h3>団体プラン</h3>
-    <p class = "right">
-    定員<br>
-    料金<br>
-    広さ
-    <img src="../img/dish3.png">
-    </p>
+    
+    <div class = "display-flex-left">
+        <div class = "display-block">
+            <h3 class = "top_size">ベーシックプラン</h3>
+            <div class = "text_size">
+                定員　2名<br>
+                料金　28,000円<br>
+                広さ　15㎡<br>
+            </div>
+        </div>
+        <img src="../img/plan1.png">
+    </div>
+    <hr>
+    <div class = "display-flex-right">
+        <img src="../img/plan2.jpg">
+        <div class = "display-block">
+            <h3 class = "top_size">紅葉プラン</h3>
+            <div class = "text_size">
+                定員　4名<br>
+                料金　46,000円<br>
+                広さ　36㎡
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class = "display-flex-left">
+        <div class = "display-block">
+            <h3 class = "top_size">団体プラン</h3>
+            <div class = "text_size">
+                定員　10~15名<br>
+                料金　140,000円<br>
+                広さ　75㎡
+            </div>
+        </div>
+        <img src="../img/plan3.jpg">
+    </div>
+    
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>

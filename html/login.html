@@ -9,24 +9,28 @@
 <header id="header">
 <nav>
 <ul>
-    <li><a href="homepage.html"><img src="../img/logo.png" width = 50px></a></li>
-    <li><a href="about.html">旅館について</a></li>
-    <li><a href="dish.html">料理</a></li>
-    <li><a href="institution.html">施設</a></li>
-    <li><a href="plan.html">プラン</a></li>
-    <li><a href="access.html">アクセス</a></li>
-    <li><a href="reservation.html">予約</a></li>
-    <li><a href="login.html">ログイン</a></li>
+    <li><a href="../cgi/homepage.cgi"><img src="../img/logo1.png" width = 50px></a></li>
+    <li><a href="../cgi/about.cgi">旅館について</a></li>
+    <li><a href="../cgi/dish.cgi">料理</a></li>
+    <li><a href="../cgi/institution.cgi">施設</a></li>
+    <li><a href="../cgi/plan.cgi">プラン</a></li>
+    <li><a href="../cgi/access.cgi">アクセス</a></li>
+    <li><a href="../cgi/reservation.cgi">予約</a></li>
+    <li><a href="../cgi/login.cgi">ログイン</a></li>
 </ul>
 </nav>
 </header>
-<form action="login.html" method="post">
-<p>ユーザー名</p>
-<input id="user_id" name="user_name" type="text">
+<br>
+<form action="login.cgi" method="post">
+<p>メールアドレス</p>
+<input name="mail_address" type="email">
 <p>パスワード</p>
-<input id="password" name="password" type="password">
+<input name="password" type="password">
+{1[0]}
 <button type="submit">ログイン</button>
 </form>
+<br>
+<a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>

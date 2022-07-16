@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>about</title>
+<link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+<script id="header_1">
+header();
+function header(text="cat"){
+    //alert(text);
+    var file = new File([""],"../html/header.html");
+    var reader = new FileReader(file);
+    //alert(reader);
+    reader.onload = function(event){
+        html = reader.result;
+        alert(reader.readyState);
+        alert(reader.result);
+    };
+    html = reader.readAsText(file);
+    
+};
+</script>
+<script src="../js/header.js"></script>
+</body>
