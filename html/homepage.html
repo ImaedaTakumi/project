@@ -6,31 +6,89 @@
         <link rel="stylesheet" href="../css/base.css">
     </head>
     <body>
-        <header id="header">
-            <nav>
-                <ul>
-                    <li><a href="../cgi/homepage.cgi"><img src="../img/logo1.png" width = 50px></a></li>
-                    <li><a href="../cgi/about.cgi">旅館について</a></li>
-                    <li><a href="../cgi/dish.cgi">料理</a></li>
-                    <li><a href="../cgi/institution.cgi">施設</a></li>
-                    <li><a href="../cgi/plan.cgi">プラン</a></li>
-                    <li><a href="../cgi/access.cgi">アクセス</a></li>
-                    <li><a href="../cgi/reservation.cgi">予約</a></li>
-                    <li><a href="../cgi/login.cgi">ログイン</a></li>
-                    {0[0]}
-                </ul>
-            </nav>
-        </header>
-        <div class = "home">
-            <img src="../img/home.jpg">
-            <div class = "home_char">
-                <h1 class = "animation">想いつながる</h1>
-                <p class = "animation_before1">いつもと同じ人といつもと違う場所</p>
-                <p class = "animation_before2">気付かなかった気持ちに気付く</p>
-                <p class = "animation_before3">体も心も温めて想いつながる</p>
-                <p class = "animation_before4">つなぐ温泉</p>
+        <div class = 'bind'>
+            <!-- 見えるヘッダー -->
+            <header id="abs_header">
+                <nav>
+                    <ul>
+                        <li><a id="abs_a" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
+                        <li><a id="abs_a" href="../cgi/about.cgi">旅館について</a></li>
+                        <li><a id="abs_a" href="../cgi/dish.cgi">料理</a></li>
+                        <li><a id="abs_a" href="../cgi/institution.cgi">施設</a></li>
+                        <li><a id="abs_a" href="../cgi/plan.cgi">プラン</a></li>
+                        <li><a id="abs_a" href="../cgi/access.cgi">アクセス</a></li>
+                        <li><a id="abs_a" href="../cgi/reservation.cgi">予約</a></li>
+                        <li><a id="abs_a" href="../cgi/login.cgi">ログイン</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- 途中から出てくるヘッダー -->
+            <header id="rel_header">
+                <nav>
+                    <ul>
+                        <li><a id="rel_a" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
+                        <li><a id="rel_a" href="../cgi/about.cgi">旅館について</a></li>
+                        <li><a id="rel_a" href="../cgi/dish.cgi">料理</a></li>
+                        <li><a id="rel_a" href="../cgi/institution.cgi">施設</a></li>
+                        <li><a id="rel_a" href="../cgi/plan.cgi">プラン</a></li>
+                        <li><a id="rel_a" href="../cgi/access.cgi">アクセス</a></li>
+                        <li><a id="rel_a" href="../cgi/reservation.cgi">予約</a></li>
+                        <li><a id="rel_a" href="../cgi/login.cgi">ログイン</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id = "home">
+                <img src="../img/about1.png">
+                <div id = "home_char">
+                    <h1 class = "animation">想いつながる</h1>
+                    <p class = "animation_before1">いつもと同じ人といつもと違う場所</p>
+                    <p class = "animation_before2">気付かなかった気持ちに気付く</p>
+                    <p class = "animation_before3">体も心も温めて想いつながる</p>
+                    <p class = "animation_before4">つなぐ温泉</p>
+                </div>
             </div>
         </div>
+        <!-- ほんとはしたくない調節 -->
+        <img class = "about_tmp" src="../img/about1.png">
+        <!-- 旅館について -->
+        <div class = "about">
+            <h1>夢つなぎ　人つなぎ　温もりつなぐ地</h1>
+            <div>
+                <h3 class = "right">
+                <br>
+                <br>
+                人と繋がる。自然と繋がる。<br>
+                繋ぎ、温泉。
+                <img src="../img/about2.png">
+                </h3>
+                <h3 class = "left"><img src="../img/about3.png">
+                <br>
+                <br>
+                期待を裏切る価値がある。</h3>
+            </div>
+        </div>
+        <div class = "dish">
+            <h4>お料理:A</h4>
+            <p class = "right">
+            ここに説明を入れます。画像にclass="fr"を追加すればこのように画像が右に回り込みとなります。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
+            サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+            <img src="../img/dish1.png">
+            </p>
+            <h4>お料理:B</h4>
+            <p class = "left"><img src="../img/dish2.png">
+            ここに説明を入れます。画像にclass="fl"を追加すればこのように画像が左に回り込みとなります。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
+            サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</p>
+            <h4>お料理:A</h4>
+            <p class = "right">
+            ここに説明を入れます。画像にclass="fr"を追加すればこのように画像が右に回り込みとなります。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
+            サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+            <img src="../img/dish3.png">
+            </p>
+            <h4>お料理:B</h4>
+            <p class = "left"><img src="../img/dish4.png">
+            ここに説明を入れます。画像にclass="fl"を追加すればこのように画像が左に回り込みとなります。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
+            サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</p>
+            </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="../js/base.js" async></script>
     </body>
