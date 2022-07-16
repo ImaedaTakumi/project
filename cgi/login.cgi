@@ -39,9 +39,7 @@ form = cgi.FieldStorage()
 
 if form.list == []:
 	#GET
-	with open("../html/login.html",mode="r",encoding="utf-8") as html:
-		print("Content-Type: text/html\n")
-		print(html.read())
+	htmlpage("../html/login.html")
 else:
 	#POST
 	mail_address = form.getfirst('mail_address')
@@ -69,14 +67,10 @@ else:
 			print("Location:./login_success.cgi\n")
 		else:
 			#login failed
-			with open("../html/login.html",mode="r",encoding="utf-8") as html:
-				print("Content-Type: text/html\n")
-				print(html.read())
+			htmlpage("../html/login.html")
 	else:
 		#form error
-		with open("../html/login.html",mode="r",encoding="utf-8") as html:
-			print("Content-Type: text/html\n")
-			print(html.read())
+		htmlpage("../html/login.html")
 
 
 

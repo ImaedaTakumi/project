@@ -49,9 +49,7 @@ credit_id = form.getfirst('creditID')
 
 if form.list == []:
 	#GET
-	with open("../html/adduser.html",mode="r",encoding="utf-8") as html:
-		print("Content-Type: text/html\n")
-		print(html.read())
+	htmlpage("../html/adduser.html")
 else:
 	#POST
 	if not mail_address:

@@ -4,6 +4,7 @@ import MySQLdb
 import os
 from http import cookies
 import random, string
+import sensin
 
 def get_random_str(no):
 	char_data = string.digits + string.ascii_lowercase + string.ascii_uppercase

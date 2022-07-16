@@ -4,7 +4,6 @@ import MySQLdb
 import os
 from http import cookies
 import random, string
-
 def get_random_str(no):
 	char_data = string.digits + string.ascii_lowercase + string.ascii_uppercase
 	return ''.join([random.choice(char_data) for i in range(no)])
