@@ -42,16 +42,16 @@ nav ul{
 
 #abs_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding:30px;
 }
 
-/*アニメーション要素のスタイル*/
 #rel_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 1.5vw;
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -60,7 +60,6 @@ nav ul{
 
 /*アニメーション*/
 .animation{
-    text-align: center;
 	opacity : 0;
 	visibility: hidden;
 	transition: 1s;
@@ -105,13 +104,11 @@ nav ul{
 .right{
     display: flex;
     justify-content: space-between;
-    align-items: center
 }
 
 .left{
     display: flex;
     justify-content: space-between;
-    align-items: center
 }
 
 /*右側に文字を調節*/
@@ -120,19 +117,45 @@ nav ul{
     margin-right: 150px;
 }
 
+/*ヘッダー調節*/
+.bind{
+    position: relative;
+}
+
 /*ホームページ*/
-.home{
-    width: 100vw ;
-    top: 90px;
+#home{
+    position: absolute;
+    top: 8px;
+    text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 4vw;
+}
+
+#home>img{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+#home_char{
+    position: absolute;
+    top: 5vh;
+    left: 18vw;
+    z-index: 2;
+    color:rgb(255, 255, 255);
 }
 
 /*旅館について*/
-.about1{
-    width: 100vw;
-    top: 90px;
+
+.about_tmp{
+    width: 85%;
 }
 
-.about2 img{
+.about{
+    vertical-align: -10px;
+}
+
+.about img{
     width: 50%;
 }
 
