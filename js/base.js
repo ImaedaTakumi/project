@@ -1,21 +1,3 @@
-$(function(){
-    $(window).on('load scroll',function (){
-        $('.animation').each(function(){
-            //ターゲットの位置を取得
-            var target = $(this).offset().top;
-            //スクロール量を取得
-            var scroll = $(window).scrollTop();
-            //ウィンドウの高さを取得
-            var height = $(window).height();
-            //ターゲットまでスクロールするとフェードインする
-            if (scroll > target - height){
-                //クラスを付与
-                $(this).addClass('active');
-            }
-        });
-    });
-});
-
 /*https://coco-factory.jp/ugokuweb/move01/5-1-5/から引用*/
 //スクロールすると上部に固定させるための設定を関数でまとめる
 function FixedAnime() {
@@ -36,4 +18,37 @@ $(window).scroll(function () {
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function () {
     FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+});
+
+/*アニメーション*/
+function animation(){
+    $('.animation').each(function(){
+        //ターゲットの位置を取得
+        var target = $(this).offset().top;
+        //スクロール量を取得
+        var scroll = $(window).scrollTop();
+        //ウィンドウの高さを取得
+        var height = $(window).height();
+        //ターゲットまでスクロールするとフェードインする
+        if (scroll > target - height){
+            //クラスを付与
+            $(this).addClass('active');
+        }
+    });
+}
+
+$(window).on('load scroll',function (){
+    animation()
+    setTimeout(() => {
+        $('.animation_before1').addClass('active')
+    }, 1000)
+    setTimeout(() => {
+        $('.animation_before2').addClass('active')
+    }, 1200)
+    setTimeout(() => {
+        $('.animation_before3').addClass('active')
+    }, 1500)
+    setTimeout(() => {
+        $('.animation_before4').addClass('active')
+    }, 1900)
 });
