@@ -20,16 +20,6 @@ cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
-	with open("../html/homepage.html",mode="r",encoding="utf-8") as html:
-		lines = html.readlines()
-	lines.insert(19, "<li><a>ログイン中</a></li>")
-	with open("../html/",mode="w",encoding="utf-8") as tmp:
-		tmp.writelines(lines)
-	with open("../html/homepage.html",mode="r",encoding="utf-8") as tmp:
-		print("Content-Type: text/html\n")
-		print(tmp.read())
-
+	sensin.htmlpage("../html/homepage.html",text=["<li><a>ログイン中</a></li>"])
 else:
-	with open("../html/homepage.html",mode="r",encoding="utf-8") as html:
-		print("Content-Type: text/html\n")
-		print(html.read())
+	sensin.htmlpage("../html/homepage.html")

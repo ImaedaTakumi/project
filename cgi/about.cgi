@@ -22,15 +22,6 @@ login_now = '''
 
 if cookielogin:
 	#cookie login sucsess
-	with open("../html/about.html",mode="r",encoding="utf-8") as html:
-		lines = html.readlines()
-	lines.insert(19, "<li><a>ログイン中</a></li>")
-	with open("../html/tmp.html",mode="w",encoding="utf-8") as tmp:
-		tmp.writelines(lines)
-	with open("../html/tmp.html",mode="r",encoding="utf-8") as tmp:
-		print("Content-Type: text/html\n")
-		print(tmp.read())
-
-
+	sensin.htmlpage("../html/about.html",text=["<li><a>ログイン中</a></li>"])
 else:
 	sensin.htmlpage("../html/about.html")

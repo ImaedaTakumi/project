@@ -29,6 +29,4 @@ if cookielogin:
 		print(tmp.read())
 
 else:
-	with open("../html/",mode="r",encoding="utf-8") as html:
-		print("Content-Type: text/html\n")
-		print(html.read())
+	sensin.htmlpage("../html/")
