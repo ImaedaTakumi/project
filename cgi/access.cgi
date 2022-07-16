@@ -3,33 +3,8 @@ import cgi
 import MySQLdb
 import os
 from http import cookies
-import random, string
+import sensin
 
-def get_random_str(no):
-	char_data = string.digits + string.ascii_lowercase + string.ascii_uppercase
-	return ''.join([random.choice(char_data) for i in range(no)])
-
-#SQL接続
-def connection_MySQL(sql,type,db):
-	connection = MySQLdb.connect(
-		host='localhost',
-		user='user1',
-		passwd='passwordA1!',
-		db=db,
-		charset='utf8'
-	)
-	cursor = connection.cursor()
-	if type == "w" or type == "write":
-		cursor.execute(sql)
-		connection.commit()
-		connection.close()
-		return 
-	if type == "r" or type == "read":
-		cursor.execute(sql)
-		result = cursor.fetchall()
-		connection.close()
-		return result
-		
 ### main program ###
 
 # reading cookie
@@ -40,7 +15,7 @@ except KeyError:
 	session_id = ""
 	
 sql = "select `session_id` from Session where session_id = '"+session_id+"'"
-cookielogin = connection_MySQL(sql,"r","hotel")
+cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
