@@ -3,7 +3,6 @@ import cgi
 import MySQLdb
 import os
 from http import cookies
-import random, string
 import sensin
 		
 ### main program ###

@@ -41,7 +41,7 @@ else:
 			sensin.htmlpage("../html/login.html")
 	else:
 		#form error
-		sensin.htmlpage("../html/login.html")
+		sensin.htmlpage("../html/login.html",error=error)
 
 
 
