@@ -26,7 +26,7 @@ def connection_MySQL(sql,type,db):
 		connection.close()
 		return result
 
-def htmlpage(page,text=""):
+def htmlpage(page,text=[""]):
 	with open(page,mode="r",encoding="utf-8") as html:
 		print("Content-Type: text/html\n")
-		print(html.read()%text)
+		print(html.read().format(text))

@@ -52,11 +52,8 @@ else:
 		else:
 			gender = 0
 		# ユーザ登録
-		try:
-			sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birthday}',{credit_id})"
-			sensin.connection_MySQL(sql,"w","hotel")
-		except:
-			print("Location:http://192.168.42.128\n")
+		sql = f"insert into `Account`(`Account_id`,`Mail_address`,`Password`,`User_name`,`Home_address`,`Gender`,`Birth_date`,`Credit_id`) values(null,'{mail_address}','{password}','{user_name}','{home_address}','{gender}','{birthday}',{credit_id})"
+		sensin.connection_MySQL(sql,"w","hotel")
 		print("Location:./add_success.cgi\n")
 	else:
 		sensin.htmlpage("../html/adduser.html",error)
