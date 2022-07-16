@@ -32,3 +32,4 @@ else:
 	with open("../html/plan.html",mode="r",encoding="utf-8") as html:
 		print("Content-Type: text/html\n")
 		print(html.read())
+		
