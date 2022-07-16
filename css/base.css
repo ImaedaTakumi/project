@@ -55,27 +55,30 @@ nav ul li a:hover{
 	transition: 1s;
 	transform: translateY(30px);
 }
-
 .animation_before1{
     opacity : 0;
+    line-height: 1em;
 	visibility: hidden;
 	transition: 2s;
 	transform: translateY(30px);
 }
 .animation_before2{
     opacity : 0;
+    line-height: 1em;
 	visibility: hidden;
 	transition: 2s;
 	transform: translateY(30px);
 }
 .animation_before3{
     opacity : 0;
+    line-height: 1em;
 	visibility: hidden;
 	transition: 2s;
 	transform: translateY(30px);
 }
 .animation_before4{
     opacity : 0;
+    line-height: 1em;
 	visibility: hidden;
 	transition: 2s;
 	transform: translateY(30px);

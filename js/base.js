@@ -44,11 +44,11 @@ $(window).on('load scroll',function (){
     }, 1000)
     setTimeout(() => {
         $('.animation_before2').addClass('active')
-    }, 500)
+    }, 1200)
     setTimeout(() => {
         $('.animation_before3').addClass('active')
-    }, 500)
+    }, 1500)
     setTimeout(() => {
         $('.animation_before4').addClass('active')
-    }, 500)
+    }, 1900)
 });
