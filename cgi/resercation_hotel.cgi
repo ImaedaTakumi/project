@@ -3,10 +3,13 @@ import cgi
 import MySQLdb
 import os
 from http import cookies
+
+from requests import Session
 import sensin
 
 ### main program ###
-
+error = {}
+form = cgi.FieldStorage()
 # reading cookie
 cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
 try:
