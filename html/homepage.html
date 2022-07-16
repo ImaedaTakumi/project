@@ -7,7 +7,7 @@
     </head>
     <body>
         <!-- 見えるヘッダー -->
-        <header id="abs_header">
+        <header class="abs_header">
             <nav>
                 <ul>
                     <li><a id="abs_a" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
@@ -22,7 +22,7 @@
             </nav>
         </header>
         <!-- 途中から出てくるヘッダー -->
-        <header id="rel_header">
+        <header class="rel_header">
             <nav>
                 <ul>
                     <li><a id="rel_a" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
@@ -36,7 +36,7 @@
                 </ul>
             </nav>
         </header>
-        <div id = "home">
+        <div class = "home">
             <img src="../img/about1.png">
             <div id = "home_char">
                 <h1 class = "animation">想いつながる</h1>
@@ -56,59 +56,40 @@
                 <h3 class = "animation_before2"><img src="../img/about3.png">期待を裏切る<br>価値がある。</h3>
             </div>
         </div>
-        <div class="dish_img">
-            <img class="dish_img_a" src="../img/dish1.png">
-            <img class="dish_img_b" src="../img/dish2.png">
+        <div class = "img_table">
+            <h1>～料理～</h1>
+            <div class="img_table_img">
+                <img class="img_table_a" src="../img/dish1.png">
+                <img class="img_table_b" src="../img/dish2.png">
+            </div>
+            <div class="img_table_img">
+                <img class="img_table_a" src="../img/dish3.png">
+                <img class="img_table_b" src="../img/dish4.png">
+            </div>
+            <h2>素材選びや調理、盛り付けはもとより、ご夕食を供するお部屋の設えや雰囲<br>
+                気、眺望、季節感に至るまで心を配り、倉片町に寄り添う宿にふさわしい献<br>
+                立に仕立て上げます。
+            </h2>
         </div>
-        <div class="dish_img">
-            <img class="dish_img_a" src="../img/dish3.png">
-            <img class="dish_img_b" src="../img/dish4.png">
-        </div>
-        <!-- 本当ははしたくない調節 -->
-        <h1><br><br><br><br><br><br><br><br><br><br><br><br></h1>
         <!-- 施設-->
-        <h1 style="text-align:center;font-size:large">豊かな自然と平穏に満ちた<br></h1>
-        <div class="animation">
-        <h2 style="text-align:center;font-size:larger;color:rgb(61, 108, 109)">清廉なる空間</h2>
-        </div>
-        <div class = "institution">
-        <h4>客室:大人3名様まで</h4>
-        <p class = "right">
-            禁煙<br>
-            設備：電話、湯沸かしポット、お茶セット、電気スタンド、金庫
-        <img src="../img/sisetu1.png">
-        </p>
-        <h4>客室:大人4名まで</h4>
-        <p class = "left"><img src="../img/sisetu2.png">
-            喫煙可<br>
-            設備：テレビ、電話、湯沸かしポット、お茶セット、電気スタンド、金庫<br>
-            外の景色も堪能できる広いお部屋となっております。
-        </p>
-        <h4>和室:大人5名まで</h4>
-        <p class = "right">
-            禁煙<br>
-            設備：テレビ、電話、湯沸かしポット、お茶セット、電気スタンド、金庫<br>
-            風情ある和室でゆったりと流れる時間をご堪能ください。
-        <img src="../img/sisetu3.png">
-        </p>
-        <h4>広間:大人8名まで</h4>
-        <p class = "left"><img src="../img/sisetu4.png">
-            禁煙<br>
-            設備：テレビ、電話、湯沸かしポット、お茶セット、電気スタンド、金庫<br>
-            少人数で泊まるもよし、大人数で泊まるもよし。名広間となっております。
-        </p>
-        <h4>お風呂</h4>
-        <p class = "right">
-            豊かな自然を堪能しながら疲れを癒すことができます。<br>
-            忙しい日々を忘れ、疲れを癒してください。
-        <img src="../img/sisetu5.png">
-        </p>
-        <h4>卓球台</h4>
-        <p class = "left"><img src="../img/sisetu6.png">
-            お風呂上りやレクリエーションに最適な卓球ができる空間となっています。<br>
-            他の宿泊者と楽しむことも。<br>
-            楽しいひと時をお過ごしください。
-        </p>
+        <div class = "img_table">
+            <h1>～施設～</h1>
+            <div class="img_table_img">
+                <img class="img_table_a" src="../img/sisetu1.png">
+                <img class="img_table_b" src="../img/sisetu2.png">
+            </div>
+            <div class="img_table_img">
+                <img class="img_table_a" src="../img/sisetu3.png">
+                <img class="img_table_b" src="../img/sisetu4.png">
+            </div>
+            <div class="img_table_img">
+                <img class="img_table_a" src="../img/sisetu5.png">
+                <img class="img_table_b" src="../img/sisetu6.png">
+            </div>
+            <h2>素材選びや調理、盛り付けはもとより、ご夕食を供するお部屋の設えや雰囲<br>
+                気、眺望、季節感に至るまで心を配り、倉片町に寄り添う宿にふさわしい献<br>
+                立に仕立て上げます。
+            </h2>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="../js/base.js" async></script>

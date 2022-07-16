@@ -4,7 +4,7 @@ https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
 positionをabsoluteからflexに変更
 ----------------------------*/
 
-#abs_header{
+.abs_header{
     position: relative;
     z-index: 10;
     height: 100px;
@@ -17,7 +17,7 @@ positionをabsoluteからflexに変更
     z-index: 2;
 }
 
-#rel_header{
+.rel_header{
 	position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/
     height: 100px;
@@ -30,7 +30,7 @@ positionをabsoluteからflexに変更
     transition: .5s;
 }
 
-#rel_header.is-show{
+.rel_header.is-show{
     top: 0px;
 }
 
@@ -121,7 +121,7 @@ nav ul{
 }
 
 /*ホームページ*/
-#home{
+.home{
     position: absolute;
     top: 8px;
     text-align: center;
@@ -129,7 +129,7 @@ nav ul{
     font-size: 4vw;
 }
 
-#home>img{
+.home>img{
     position: relative;
     width: 100%;
     z-index: 1;
@@ -160,20 +160,30 @@ nav ul{
     width: 50%;
 }
 
-/*料理*/
-.dish_img{
+/*料理 施設*/
+.img_table h1{
+    text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 4vw;
+}
+
+.img_table h2{
+    text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    margin: 0px;
+}
+
+.img_table_img{
     display: flex;
 }
 
-.dish_img_a{
+.img_table_a{
     width: 50%
 }
-.dish_img_b{
-    width: 50%;
-}
-
-/*施設*/
-.institution img{
+.img_table_b{
     width: 50%;
 }
 
