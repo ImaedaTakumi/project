@@ -35,6 +35,7 @@ nav ul li a{
     color: #666;
     padding:10px;
 }
+
 nav ul li.current a,
 nav ul li a:hover{
     /*-webkit-transform-origin: left top;
@@ -47,20 +48,21 @@ nav ul li a:hover{
     background-color: rgb(255, 255, 255);
 }
 
-.home{
-    width: 100vw ;
-    top: 90px;
-}
-
-/*アニメーション要素のスタイル*/
+/*アニメーション*/
 .animation{
 	opacity : 0;
 	visibility: hidden;
 	transition: 1s;
 	transform: translateY(30px);
-    text-align: center;
 }
-/*アニメーション要素までスクロールした時のスタイル*/
+
+.animation_before{
+    opacity : 0;
+	visibility: hidden;
+	transition: 1s;
+	transform: translateY(30px);
+}
+
 .active{
 	opacity: 1;
 	visibility: visible;
@@ -84,9 +86,28 @@ nav ul li a:hover{
     margin-right: 150px;
 }
 
+/*ホームページ*/
+.home{
+    position: relative;
+    text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 4vw;
+}
+
+.home>img{
+    width: 100%;
+}
+
+.home_char{
+    position: absolute;
+    top: 5vh;
+    left: 9vw;
+    color:rgb(255, 255, 255);
+}
+
 /*旅館について*/
 .about1{
-    width: 100vw ;
+    width: 100%;
     top: 90px;
 }
 
