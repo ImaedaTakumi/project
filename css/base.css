@@ -103,12 +103,10 @@ nav ul{
 /*画像の位置調整*/
 .right{
     display: flex;
-    justify-content: space-between;
 }
 
 .left{
     display: flex;
-    justify-content: space-between;
 }
 
 /*右側に文字を調節*/
@@ -152,6 +150,9 @@ nav ul{
 }
 
 .about{
+    text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 4vw;
     vertical-align: -10px;
 }
 
@@ -160,9 +161,17 @@ nav ul{
 }
 
 /*料理*/
-.dish img{
+.dish_img{
+    display: flex;
+}
+
+.dish_img_a{
+    width: 50%
+}
+.dish_img_b{
     width: 50%;
 }
+
 /*施設*/
 .institution img{
     width: 50%;
