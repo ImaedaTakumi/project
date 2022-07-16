@@ -1,6 +1,7 @@
 import cgi
 import MySQLdb
 import random, string
+from collections import defaultdict
 
 def get_random_str(no):
 	char_data = string.digits + string.ascii_lowercase + string.ascii_uppercase
@@ -26,7 +27,10 @@ def connection_MySQL(sql,type,db):
 		connection.close()
 		return result
 
-def htmlpage(page,text=[""],error=[""]):
+def htmlpage(page,text=[""],error={}):
 	with open(page,mode="r",encoding="utf-8") as html:
 		print("Content-Type: text/html\n")
-		print(html.read().format(text,error))
+		data = defaultdict(lambda: str())
+		for i,j in error.items():
+			data[i] = j
+		print(html.read().format(text,data))
