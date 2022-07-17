@@ -28,7 +28,7 @@ else:
 if form.list == []:
 	#GET
 	#getで来たらreservation.html
-	sensin.htmlpage("../html/reservation.html")
+	sensin.htmlpage("../html/reservation.html",text=text)
 else:
 	#POST
 	# 色々判定できる
@@ -39,6 +39,6 @@ else:
 	text.extend([hotel,plan])
 
 	if "" in text:
-		sensin.htmlpage("../html/reservation.html",error={"error":"全ての項目を入力してください<br>"})
+		sensin.htmlpage("../html/reservation.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 	else:
 		sensin.htmlpage("../html/reservation_hotel.html",text=text)

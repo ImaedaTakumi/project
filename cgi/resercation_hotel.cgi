@@ -29,7 +29,7 @@ else:
 if form.list == []:
 	#GET
 	#getで来たらreservation.html
-	sensin.htmlpage("../html/reservation.html")
+	sensin.htmlpage("../html/reservation.html",text=text)
 else:
 	#POST
 	# 色々判定できる
