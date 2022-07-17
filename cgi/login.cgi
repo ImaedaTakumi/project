@@ -23,7 +23,6 @@ else:
 	if not password:
 		error["password"] = "パスワードを入力してください<br>"
 
-
 	if error == {}:
 		# mail/password check
 		sql = f"select (`Account_id`) from Account where Mail_address = '{mail_address}' and Password = '{password}'"
