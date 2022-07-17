@@ -1,3 +1,6 @@
+body{
+    background-image: url("../img/background_img.jpg");
+}
 /*----------------------------
 タグheader, li, ul, ul liは
 https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
@@ -6,7 +9,7 @@ positionをabsoluteからflexに変更
 .header{
     position: relative;
     z-index: 10;
-    height: 100px;
+    height: 90px;
     display: flex;
     top: 0px;
     justify-content: space-between;
@@ -19,7 +22,7 @@ positionをabsoluteからflexに変更
 .abs_header{
     position: relative;
     z-index: 10;
-    height: 100px;
+    height: 90px;
     display: flex;
     top: 0px;
     justify-content: space-between;
@@ -32,7 +35,7 @@ positionをabsoluteからflexに変更
 .rel_header{
 	position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/
-    height: 100px;
+    height: 90px;
     display: flex;
     top: -100px;
     background-color: rgba(255, 255, 255, 0.6);/*背景を透過した白に変更*/
@@ -52,31 +55,32 @@ nav ul{
     justify-content: center;
 }
 
-#abs_a{
+.abs_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding:30px;
+    padding: 20px;
 }
 
-#rel_a{
+.rel_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
+    font-weight: 900;
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    padding:30px;
+    padding:20px;
 }
 
-#a{
+.a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding:30px;
+    padding:20px;
 }
 
 /*アニメーション*/
@@ -121,26 +125,6 @@ nav ul{
 	transform: translateY(0);
 }
 
-/*画像の位置調整*/
-.right{
-    display: flex;
-}
-
-.left{
-    display: flex;
-}
-
-/*右側に文字を調節*/
-.right_side{
-    text-align: right;
-    margin-right: 150px;
-}
-
-/*ヘッダー調節*/
-.bind{
-    position: relative;
-}
-
 /*ホームページ*/
 .home{
     position: absolute;
@@ -156,7 +140,7 @@ nav ul{
     z-index: 1;
 }
 
-#home_char{
+.home_char{
     position: absolute;
     top: 5vh;
     left: 18vw;
@@ -181,7 +165,7 @@ nav ul{
     width: 50%;
 }
 
-/*料理 施設*/
+/*料理 施設 プラン*/
 .img_table h1{
     text-align: center;
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
@@ -197,57 +181,50 @@ nav ul{
     margin: 0px;
 }
 
-.img_table_img{
+.img_table_parent{
     display: flex;
 }
 
-.img_table_a{
-    width: 50%
-}
-.img_table_b{
+.img_table_child_d{
     width: 50%;
+}
+
+.img_table_child_t{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*プラン*/
-.plan img{
-    width: 50%;
+.plan{
+    position: relative;
 }
 
-.display-block{
-    display: block;
-    float: center;
+.plan p,.plan h3{
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    
 }
 
-.display-flex-left{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 50px;
-    
-}
-
-.display-flex-right{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 150px;
-}
-
-.top_size{
-    font-size: 30px;
-}
-
-.text_size{
-    font-size: 20px;
+.plan p:hover{
+    opacity: 1; transition: 2s;
 }
 
 /*アクセス*/
 .access{
     text-align: center;
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 1.5vw;
 }
 
 /*予約成功*/
@@ -264,4 +241,14 @@ nav ul{
     border: 1px solid #ccc;
 	padding: 10px 15px;
 	word-break: break-all;
+}
+
+/*フッター*/
+.copyright{
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 1vh;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    margin: 0px;
 }

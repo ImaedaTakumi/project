@@ -33,22 +33,54 @@ function animation(){
         if (scroll > target - height){
             //クラスを付与
             $(this).addClass('active');
+            setTimeout(() => {
+                $('.animation_before1').addClass('active')//1000ms後に表示
+            }, 1000)
+            setTimeout(() => {
+                $('.animation_before2').addClass('active')//1200ms後に表示
+            }, 1200)
+            setTimeout(() => {
+                $('.animation_before3').addClass('active')//1500ms後に表示
+            }, 1500)
+            setTimeout(() => {
+                $('.animation_before4').addClass('active')//1900ms後に表示
+            }, 1900)
         }
     });
 }
 
-$(window).on('load',function (){//ページがロードされたら
+$(window).on('load scroll',function (){//ページがロードされたら
     animation()//アニメーション実行
-    setTimeout(() => {
-        $('.animation_before1').addClass('active')//1000ms後に表示
-    }, 1000)
-    setTimeout(() => {
-        $('.animation_before2').addClass('active')//1200ms後に表示
-    }, 1200)
-    setTimeout(() => {
-        $('.animation_before3').addClass('active')//1500ms後に表示
-    }, 1500)
-    setTimeout(() => {
-        $('.animation_before4').addClass('active')//1900ms後に表示
-    }, 1900)
+});
+
+/*自動スクロール*/
+$(".scroll_home").click(function () {
+    var position = $('#home').offset().top;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_about").click(function () {
+    var position = $('#about').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_dish").click(function () {
+    var position = $('#dish').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_institution").click(function () {
+    var position = $('#institution').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_plan").click(function () {
+    var position = $('#plan').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_access").click(function () {
+    var position = $('#access').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
 });
