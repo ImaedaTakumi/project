@@ -45,7 +45,7 @@ else:
 	text=[hotel,plan,day,adult,child,room,dish,pay,memo]
 
 	if "" in text:
-		sensin.htmlpage("../html/reservation_hotel.html",text=[hotel,plan],error={"error":"全ての項目を入力してください"})
+		sensin.htmlpage("../html/reservation_hotel.html",text=[hotel,plan],error={"error":"全ての項目を入力してください<br>"})
 	else:
 		
 		sensin.htmlpage("../html/reservation_confirm.cgi",text=text)

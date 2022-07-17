@@ -45,7 +45,7 @@ else:
 	memo = form.getfirst("memo")
 
 	if "" in text:
-		sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラーです"})
+		sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラーです<br>"})
 	else:
 		#色々
 		# account情報取り出し
@@ -81,4 +81,4 @@ else:
 			sql = "insert (`Reservation_id`,`Account_id`,`Hotel_id`,`Room_id`,`Room_plan_id`,`Food_id`,`Adult_num`,`Child_num`,`Lodging_start`,`Lodging_end`,`Payment_info`,`Payment_price`,`Credit_id`,`Memo`) "
 			sql += f"values (null,{account_id},{hotel_id},{room_id},{room_plan_id},{food_id},{adult},{child},{lodging_start},{lodging_end},{pay},{price},{credit_id},{memo})"
 		except:
-			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラー2です"})
+			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラー2です<br>"})

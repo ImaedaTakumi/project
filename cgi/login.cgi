@@ -19,9 +19,9 @@ else:
 	#error
 	error = {}
 	if not mail_address:
-		error["mail_address"] = "メールアドレスを入力してください"
+		error["mail_address"] = "メールアドレスを入力してください<br>"
 	if not password:
-		error["password"] = "パスワードを入力してください"
+		error["password"] = "パスワードを入力してください<br>"
 
 
 	if error == {}:
@@ -39,7 +39,7 @@ else:
 			print("Location:./login_success.cgi\n")
 		else:
 			#login failed
-			error["error"] = "メールまたはパスワードが一致しません"
+			error["error"] = "メールまたはパスワードが一致しません<br>"
 			sensin.htmlpage("../html/login.html",error=error)
 	else:
 		#form error
