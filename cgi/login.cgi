@@ -26,14 +26,18 @@ else:
 	if error == {}:
 		# mail/password check
 		sql = f"select (`Account_id`) from Account where Mail_address = '{mail_address}' and Password = '{password}'"
-		error["test"] =sql
 		result = sensin.connection_MySQL(sql,"r","hotel")
 
 		if result:
 			#login success
 			account_id = result[0][0]
 			session_key = sensin.get_random_str(64)
-			sql = f"replace into Session (`Session_id`, `Session_key`, `Account_id`) values (null,'{session_key}',{account_id})"
+
+			sql = f"select (`Session_id`) from Session where `Account_id` = {account_id}"
+			result = sensin.connection_MySQL(sql,"r","hotel")
+			session_id = result[0][0]
+			
+			sql = f"insert into Session (`Session_id`,`Session_key`,`Account_id`) values ({session_id}, {session_key},{account_id}) on duplicate key update `Session_key` = '{session_key}';"
 			sensin.connection_MySQL(sql,"w","hotel")
 			print(f"Set-Cookie:session_key={session_key}")
 			print("Location:./login_success.cgi\n")
