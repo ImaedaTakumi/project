@@ -33,24 +33,24 @@ function animation(){
         if (scroll > target - height){
             //クラスを付与
             $(this).addClass('active');
+            setTimeout(() => {
+                $('.animation_before1').addClass('active')//1000ms後に表示
+            }, 1000)
+            setTimeout(() => {
+                $('.animation_before2').addClass('active')//1200ms後に表示
+            }, 1200)
+            setTimeout(() => {
+                $('.animation_before3').addClass('active')//1500ms後に表示
+            }, 1500)
+            setTimeout(() => {
+                $('.animation_before4').addClass('active')//1900ms後に表示
+            }, 1900)
         }
     });
 }
 
-$(window).on('load',function (){//ページがロードされたら
+$(window).on('load scroll',function (){//ページがロードされたら
     animation()//アニメーション実行
-    setTimeout(() => {
-        $('.animation_before1').addClass('active')//1000ms後に表示
-    }, 1000)
-    setTimeout(() => {
-        $('.animation_before2').addClass('active')//1200ms後に表示
-    }, 1200)
-    setTimeout(() => {
-        $('.animation_before3').addClass('active')//1500ms後に表示
-    }, 1500)
-    setTimeout(() => {
-        $('.animation_before4').addClass('active')//1900ms後に表示
-    }, 1900)
 });
 
 /*自動スクロール*/
