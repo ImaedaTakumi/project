@@ -37,7 +37,7 @@ else:
 	hotel = form.getfirst("hotel")
 	plan = form.getfirst("plan")
 
-	text=[hotel,plan]
+	text.extend([hotel,plan])
 
 	if "" in text:
 		sensin.htmlpage("../html/reservation.html",error={"error":"全ての項目を入力してください"})
