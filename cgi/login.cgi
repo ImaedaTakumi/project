@@ -39,7 +39,7 @@ else:
 			print("Location:./login_success.cgi\n")
 		else:
 			#login failed
-			error["password"] = "メールまたはパスワードが一致しません"
+			error["error"] = "メールまたはパスワードが一致しません"
 			sensin.htmlpage("../html/login.html",error=error)
 	else:
 		#form error
