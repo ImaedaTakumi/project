@@ -10,7 +10,7 @@
         <header class="abs_header">
             <nav>
                 <ul>
-                    <li><a id="abs_a" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
+                    <li><a id="abs_a" href="javascript:void(0);" onclick="ScrollWindow('home')"><img src="../img/logo2.png" width = 50px></a></li>
                     <li><a id="abs_a" href="../cgi/about.cgi">旅館について</a></li>
                     <li><a id="abs_a" href="../cgi/dish.cgi">料理</a></li>
                     <li><a id="abs_a" href="../cgi/institution.cgi">施設</a></li>
@@ -25,7 +25,7 @@
         <header class="rel_header">
             <nav>
                 <ul>
-                    <li><a id="rel_a" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
+                    <li><a id="rel_a" href="javascript:void(0);" onclick="ScrollWindow('home')"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
                     <li><a id="rel_a" href="../cgi/about.cgi">旅館について</a></li>
                     <li><a id="rel_a" href="../cgi/dish.cgi">料理</a></li>
                     <li><a id="rel_a" href="../cgi/institution.cgi">施設</a></li>
@@ -36,7 +36,7 @@
                 </ul>
             </nav>
         </header>
-        <div class = "home">
+        <div class = "home" id = "home">
             <img src="../img/about1.png">
             <div id = "home_char">
                 <h1 class = "animation">想いつながる</h1>
@@ -59,12 +59,12 @@
         <div class = "img_table">
             <h1>～料理～</h1>
             <div class="img_table_img">
-                <img class="img_table_a" src="../img/dish1.png">
-                <img class="img_table_b" src="../img/dish2.png">
+                <img class="img_table_l" src="../img/dish1.png">
+                <img class="img_table_r" src="../img/dish2.png">
             </div>
             <div class="img_table_img">
-                <img class="img_table_a" src="../img/dish3.png">
-                <img class="img_table_b" src="../img/dish4.png">
+                <img class="img_table_l" src="../img/dish3.png">
+                <img class="img_table_r" src="../img/dish4.png">
             </div>
             <h2>素材選びや調理、盛り付けはもとより、ご夕食を供するお部屋の設えや雰囲<br>
                 気、眺望、季節感に至るまで心を配り、倉片町に寄り添う宿にふさわしい献<br>
@@ -72,24 +72,60 @@
             </h2>
         </div>
         <!-- 施設-->
-        <div class = "img_table">
-            <h1>～施設～</h1>
-            <div class="img_table_img">
-                <img class="img_table_a" src="../img/sisetu1.png">
-                <img class="img_table_b" src="../img/sisetu2.png">
+        <div class = "institution">
+            <div class = "img_table">
+                <h1>～施設～</h1>
+                <div class="img_table_img">
+                    <img class="img_table_l" src="../img/sisetu1.png">
+                    <img class="img_table_r" src="../img/sisetu2.png">
+                </div>
+                <div class="img_table_img">
+                    <img class="img_table_l" src="../img/sisetu3.png">
+                    <img class="img_table_r" src="../img/sisetu4.png">
+                </div>
+                <div class="img_table_img">
+                    <img class="img_table_l" src="../img/sisetu5.png">
+                    <img class="img_table_r" src="../img/sisetu6.png">
+                </div>
+                <h2>なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそ<br>
+                    れっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい<br>
+                    文章なんかそれっぽい文章
+                </h2>
             </div>
-            <div class="img_table_img">
-                <img class="img_table_a" src="../img/sisetu3.png">
-                <img class="img_table_b" src="../img/sisetu4.png">
+        </div>
+        <!--プラン-->
+        <div class = "plan">
+            <div class = "img_table">
+                <h1>～施設～</h1>
+                <div class="img_table_img">
+                    <img class="img_table_l" src="../img/plan1.png">
+                    <div class = "text_size">
+                        定員　2名<br>
+                        料金　28,000円<br>
+                        広さ　15㎡<br>
+                    </div>
+                </div>
+                <div class="img_table_imgr">
+                    <img class="img_table_r" src="../img/plan2.jpg">
+                    <div class = "text_size">
+                        定員　2名<br>
+                        料金　28,000円<br>
+                        広さ　15㎡<br>
+                    </div>
+                </div>
+                <div class="img_table_img">
+                    <img class="img_table_l" src="../img/plan3.jpg">
+                    <div class = "text_size">
+                        定員　2名<br>
+                        料金　28,000円<br>
+                        広さ　15㎡<br>
+                    </div>
+                </div>
+                <h2>なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそ<br>
+                    れっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい<br>
+                    文章なんかそれっぽい文章
+                </h2>
             </div>
-            <div class="img_table_img">
-                <img class="img_table_a" src="../img/sisetu5.png">
-                <img class="img_table_b" src="../img/sisetu6.png">
-            </div>
-            <h2>なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそ<br>
-                れっぽい文章なんかそれっぽい文章なんかそれっぽい文章なんかそれっぽい<br>
-                文章なんかそれっぽい文章
-            </h2>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="../js/base.js" async></script>

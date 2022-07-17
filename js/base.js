@@ -20,6 +20,14 @@ $(window).on('load', function () {
     FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
 });
 
+/*スクロール*/
+function ScrollWindow(elem) {
+    var element = document.getElementById(elem);
+    var rect = element.getBoundingClientRect();
+    var elemtop = rect.top + window.pageYOffset;
+    document.documentElement.scrollTop = elemtop;
+}
+
 /*アニメーション*/
 function animation(){
     $('.animation').each(function(){

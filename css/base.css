@@ -58,12 +58,13 @@ nav ul{
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding:30px;
+    padding: 20px;
 }
 
 #rel_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
+    font-weight: 900;
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -121,26 +122,6 @@ nav ul{
 	transform: translateY(0);
 }
 
-/*画像の位置調整*/
-.right{
-    display: flex;
-}
-
-.left{
-    display: flex;
-}
-
-/*右側に文字を調節*/
-.right_side{
-    text-align: right;
-    margin-right: 150px;
-}
-
-/*ヘッダー調節*/
-.bind{
-    position: relative;
-}
-
 /*ホームページ*/
 .home{
     position: absolute;
@@ -181,7 +162,7 @@ nav ul{
     width: 50%;
 }
 
-/*料理 施設*/
+/*料理 施設 プラン*/
 .img_table h1{
     text-align: center;
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
@@ -201,10 +182,15 @@ nav ul{
     display: flex;
 }
 
-.img_table_a{
+.img_table_imgr{
+    display: flex;
+    text-align: right;
+}
+
+.img_table_l{
     width: 50%
 }
-.img_table_b{
+.img_table_r{
     width: 50%;
 }
 
