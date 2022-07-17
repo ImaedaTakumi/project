@@ -6,7 +6,7 @@ positionをabsoluteからflexに変更
 .header{
     position: relative;
     z-index: 10;
-    height: 100px;
+    height: 90px;
     display: flex;
     top: 0px;
     justify-content: space-between;
@@ -19,7 +19,7 @@ positionをabsoluteからflexに変更
 .abs_header{
     position: relative;
     z-index: 10;
-    height: 100px;
+    height: 90px;
     display: flex;
     top: 0px;
     justify-content: space-between;
@@ -32,7 +32,7 @@ positionをabsoluteからflexに変更
 .rel_header{
 	position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/
-    height: 100px;
+    height: 90px;
     display: flex;
     top: -100px;
     background-color: rgba(255, 255, 255, 0.6);/*背景を透過した白に変更*/
@@ -52,7 +52,7 @@ nav ul{
     justify-content: center;
 }
 
-#abs_a{
+.abs_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
@@ -61,23 +61,23 @@ nav ul{
     padding: 20px;
 }
 
-#rel_a{
+.rel_a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     font-weight: 900;
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    padding:30px;
+    padding:20px;
 }
 
-#a{
+.a{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding:30px;
+    padding:20px;
 }
 
 /*アニメーション*/
@@ -137,7 +137,7 @@ nav ul{
     z-index: 1;
 }
 
-#home_char{
+.home_char{
     position: absolute;
     top: 5vh;
     left: 18vw;
@@ -192,43 +192,6 @@ nav ul{
 }
 .img_table_r{
     width: 50%;
-}
-
-/*プラン*/
-.plan img{
-    width: 50%;
-}
-
-.display-block{
-    display: block;
-    float: center;
-    justify-content: center;
-    
-}
-
-.display-flex-left{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 50px;
-    
-}
-
-.display-flex-right{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 150px;
-}
-
-.top_size{
-    font-size: 30px;
-}
-
-.text_size{
-    font-size: 20px;
 }
 
 /*アクセス*/
