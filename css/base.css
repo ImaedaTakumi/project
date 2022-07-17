@@ -3,6 +3,18 @@
 https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
 positionをabsoluteからflexに変更
 ----------------------------*/
+.header{
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
 
 .abs_header{
     position: relative;
@@ -55,6 +67,15 @@ nav ul{
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    padding:30px;
+}
+
+#a{
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    font-size: 1.5vw;
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     padding:30px;
 }
 
