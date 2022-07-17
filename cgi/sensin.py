@@ -39,6 +39,7 @@ def htmlpage(page,text=[""],error={}):
 		for i,j in error.items():
 			data[i] = j
 		print(html.read().format(text,data))
+		
 
 	class CookieSession:
 		"クッキーを使ったセッションのクラス"
