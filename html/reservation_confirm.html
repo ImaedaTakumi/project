@@ -21,28 +21,31 @@
 </ul>
 </nav>
 </header>
-<form action="../cgi/resercation_hotel.cgi">
+<p>ご予約情報の確認</p>
+<!-- ^p^ -->
 <p>日時</p>
-<input type="date" name="day">
 <p>大人</p>
-<input type="number" name="adult">
 <p>小人</p>
-<input type="number" name="child">
 <p>部屋</p>
 
 <p>お食事</p>
-<input type="radio" name="dish">お料理A
-<input type="radio" name="dish">お料理B
-<input type="radio" name="dish">お料理C
-<input type="radio" name="dish">お料理D
 <p>お支払い方法の確認</p>
-<input type="radio" name="pay">現金
-<input type="radio" name="pay">クレジット
+<p>部屋</p>
+<p>お食事</p>
+<p>お支払い方法の確認</p>
 <p>お問い合わせ</p>
-<textarea name="memo" rows="10"></textarea>
+
+<form action="../cgi/resercation_success.cgi"></form>
 <input type="hidden" name="hotel" value = "{0[1]}">
 <input type="hidden" name="plan" value = "{0[2]}">
-<button type="submit">予約情報の確定</button>
+<input type="hidden" name="day" value = "{0[3]}">
+<input type="hidden" name="adult" value = "{0[4]}">
+<input type="hidden" name="child" value = "{0[5]}">
+<input type="hidden" name="room" value = "{0[6]}">
+<input type="hidden" name="dish" value = "{0[7]}">
+<input type="hidden" name="pay" value = "{0[8]}">
+<input type="hidden" name="memo" value = "{0[9]}">
+<button type="submit">予約情報の送信</button>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>

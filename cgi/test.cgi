@@ -1,13 +1,13 @@
+#!/usr/bin/python3 --
 import cgi
+from datetime import datetime
 import MySQLdb
 import random, string
-from collections import defaultdict
-from datetime import datetime
-#import MySQLdb
 import os ,json
+import datetime
 from http import cookies
+import cgitb
 import hashlib
-
 def get_random_str(no):
 	char_data = string.digits + string.ascii_lowercase + string.ascii_uppercase
 	return ''.join([random.choice(char_data) for i in range(no)])
@@ -31,15 +31,38 @@ def connection_MySQL(sql,type,db):
 		result = cursor.fetchall()
 		connection.close()
 		return result
+		
+### main program ###
+error = {}
+form = cgi.FieldStorage()
+cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
 
-def htmlpage(page,text=[""],error={}):
-	with open(page,mode="r",encoding="utf-8") as html:
-		print("Content-Type: text/html\n")
-		data = defaultdict(lambda: str())
-		for i,j in error.items():
-			data[i] = j
-		print(html.read().format(text,data))
 
+if form.list == []:
+	#GET
+	htmlText='''
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>login</title>
+	</head>
+	<body>
+	<form action="./form1.cgi" method="post">
+	氏名<input type="text" name="user_name"><br>
+	住所<input type="text" name="home_address"><br>
+	<input type="submit" name="submit" value="アカウント作成">
+	</form>
+	</body>
+	'''
+	print(htmlText.encode("utf-8", 'ignore').decode('utf-8'))
+else:
+	#POST
+	#cookieの設定
+	cookie["user_name"] = form.getfirst("user_name")
+	cookie["home_address"] = form.getfirst("home_address")
+
+	#sessionの設定
 	class CookieSession:
 		"クッキーを使ったセッションのクラス"
 		
@@ -109,3 +132,19 @@ def htmlpage(page,text=[""],error={}):
 	
 		def clear(self):
 			self.values = {}
+	
+	cgitb.enable()
+	# 実行テスト(訪問カウンタの例)
+	ck = CookieSession()
+	counter = 1    
+	if "counter" in ck:
+		counter = int(ck["counter"]) + 1
+	ck["counter"] = counter
+	print("Content-Type: text/html; charset=utf-8")
+	print(ck.output())
+	print("")
+	print("counter=",counter)
+
+	cnt = cookie.output()
+	htmlText=f"今入力したやつ{cnt}" 
+	print(htmlText.encode("utf-8", 'ignore').decode('utf-8'))
