@@ -9,17 +9,20 @@ import sensin
 ### main program ###
 
 # reading cookie
+text = []
 cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
 try:
-	session_id = cookie["session_id"].value
+	session_key = cookie["session_key"].value
 except KeyError:
-	session_id = ""
+	session_key = ""
 	
-sql = "select `session_id` from Session where session_id = '"+session_id+"'"
+sql = f"select `session_id` from Session where session_key = '{session_key}'"
 cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
-	sensin.htmlpage("../html/homepage.html",text=["<li><a>ログイン中</a></li>"])
+	text.append("<li><a>ログイン中</a></li>")
 else:
-	sensin.htmlpage("../html/homepage.html")
+	text.append("")
+
+sensin.htmlpage("../html/homepage.html",text=text)

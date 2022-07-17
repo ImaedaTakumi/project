@@ -6,20 +6,38 @@
 <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <ul>
-                <li><a id="a" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
-                <li><a id="a" href="../cgi/about.cgi">旅館について</a></li>
-                <li><a id="a" href="../cgi/dish.cgi">料理</a></li>
-                <li><a id="a" href="../cgi/institution.cgi">施設</a></li>
-                <li><a id="a" href="../cgi/plan.cgi">プラン</a></li>
-                <li><a id="a" href="../cgi/access.cgi">アクセス</a></li>
-                <li><a id="a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a id="a" href="../cgi/login.cgi">ログイン</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!--見えるヘッダー-->
+        <header class="abs_header">
+            <nav>
+                <ul>
+                    <li><a class="abs_a scroll_home" href="javascript:void(0);"><img src="../img/logo2.png" width = 50px></a></li>
+                    <li><a class="abs_a scroll_about" href="javascript:void(0);">旅館について</a></li>
+                    <li><a class="abs_a scroll_dish" href="javascript:void(0);">料理</a></li>
+                    <li><a class="abs_a scroll_institution" href="javascript:void(0);">施設</a></li>
+                    <li><a class="abs_a scroll_plan" href="javascript:void(0);">プラン</a></li>
+                    <li><a class="abs_a scroll_access" href="javascript:void(0);">アクセス</a></li>
+                    <li><a class="abs_a" href="../cgi/reservation.cgi">予約</a></li>
+                    <li><a class="abs_a" href="../cgi/login.cgi">ログイン</a></li>
+                    {0[0]}
+                </ul>
+            </nav>
+        </header>
+        <!--途中から出てくるヘッダー-->
+        <header class="rel_header">
+            <nav>
+                <ul>
+                    <li><a class="rel_a scroll_home" href="javascript:void(0);"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
+                    <li><a class="rel_a scroll_about" href="javascript:void(0);">旅館について</a></li>
+                    <li><a class="rel_a scroll_dish" href="javascript:void(0);">料理</a></li>
+                    <li><a class="rel_a scroll_institution" href="javascript:void(0);">施設</a></li>
+                    <li><a class="rel_a scroll_plan" href="javascript:void(0);">プラン</a></li>
+                    <li><a class="rel_a scroll_access" href="javascript:void(0);">アクセス</a></li>
+                    <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
+                    <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
+                    {0[0]}
+                </ul>
+            </nav>
+        </header>
 <br>
 <form action="login.cgi" method="post">
 <p>メールアドレス</p>
@@ -33,6 +51,9 @@
 </form>
 <br>
 <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
+<footer>
+    <p class="copyright">&copy; 2022kurakata </p>
+</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>
