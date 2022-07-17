@@ -160,4 +160,15 @@ else:
 	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理3',480);
 	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理4',580);
 	
+	replace into Session (`Session_id`,`Session_key`,`Account_id`) values (null,"cat2",1);
+	merge into Session as A
+	using (select 1 as S_id, "cat" as key,1 as A_id) as B
+	on(A.Session_id = B.S_id)
+	when matched then 
+	update set `Session_key` = "334"
+	when not matched then
+	insert (`Session_id`,`Session_key`,`Account_id`) values (null,"cat2",1);
+
 	"""
+
+

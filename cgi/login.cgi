@@ -32,10 +32,11 @@ else:
 
 		if result:
 			#login success
-			account_id = result[0]
+			account_id = result[0][0]
 			session_key = sensin.get_random_str(64)
-			sql = f"insert into Session (`Session_id`, Session_key, `Account_id`) values ('null','{session_key}',{account_id})"
+			sql = f"replace into Session (`Session_id`, `Session_key`, `Account_id`) values (null,'{session_key}',{account_id})"
 			sensin.connection_MySQL(sql,"w","hotel")
+			print(f"Set-Cookie:{session_key}")
 			print("Location:./login_success.cgi\n")
 		else:
 			#login failed
