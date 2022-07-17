@@ -6,21 +6,38 @@
 <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
-<!-- 見えるヘッダー -->
-<header class="header">
-    <nav>
-        <ul>
-            <li><a id="a" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
-            <li><a id="a" href="../cgi/about.cgi">旅館について</a></li>
-            <li><a id="a" href="../cgi/dish.cgi">料理</a></li>
-            <li><a id="a" href="../cgi/institution.cgi">施設</a></li>
-            <li><a id="a" href="../cgi/plan.cgi">プラン</a></li>
-            <li><a id="a" href="../cgi/access.cgi">アクセス</a></li>
-            <li><a id="a" href="../cgi/reservation.cgi">予約</a></li>
-            <li><a id="a" href="../cgi/login.cgi">ログイン</a></li>
-        </ul>
-    </nav>
-</header>
+    <!--見えるヘッダー-->
+    <header class="abs_header">
+        <nav>
+            <ul>
+                <li><a class="abs_a scroll_home" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
+                <li><a class="abs_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
+                <li><a class="abs_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
+                <li><a class="abs_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
+                <li><a class="abs_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
+                <li><a class="abs_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
+                <li><a class="abs_a" href="../cgi/reservation.cgi">予約</a></li>
+                <li><a class="abs_a" href="../cgi/login.cgi">ログイン</a></li>
+                {0[0]}
+            </ul>
+        </nav>
+    </header>
+    <!--途中から出てくるヘッダー-->
+    <header class="rel_header">
+        <nav>
+            <ul>
+                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
+                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
+                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
+                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
+                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
+                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
+                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
+                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
+                {0[0]}
+            </ul>
+        </nav>
+    </header>
 <form action="../cgi/reservation.cgi" method="post">
 <p>ホテル</p>
 <input type="radio" name="hotel" value="倉片">倉片
