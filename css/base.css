@@ -1,5 +1,6 @@
 body{
     background-image: url("../img/background_img.jpg");
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
 }
 /*----------------------------
 タグheader, li, ul, ul liは
@@ -13,7 +14,7 @@ positionをabsoluteからflexに変更
     display: flex;
     top: 0px;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 100);
     width: 100%;
     text-align: center;
     z-index: 2;
@@ -56,7 +57,6 @@ nav ul{
 }
 
 .abs_a{
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
     text-decoration: none;
@@ -65,7 +65,6 @@ nav ul{
 }
 
 .rel_a{
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     font-weight: 900;
     display: block;
@@ -75,7 +74,6 @@ nav ul{
 }
 
 .a{
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     display: block;
     text-decoration: none;
@@ -130,7 +128,6 @@ nav ul{
     position: absolute;
     top: 8px;
     text-align: center;
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 4vw;
 }
 
@@ -149,32 +146,20 @@ nav ul{
 }
 
 /*旅館について*/
-
-.about_tmp{
-    width: 85%;
-}
-
 .about{
     text-align: center;
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 4vw;
     vertical-align: -10px;
-}
-
-.about img{
-    width: 50%;
 }
 
 /*料理 施設 プラン*/
 .img_table h1{
     text-align: center;
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 4vw;
 }
 
 .img_table h2{
     text-align: center;
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
     color: rgb(255, 255, 255);
     background-color: black;
@@ -200,8 +185,7 @@ nav ul{
     position: relative;
 }
 
-.plan p,.plan h3{
-    z-index: 10;
+.plan p{
     color: rgb(0, 0, 0);
     width: 100%;
     height: 100%;
@@ -209,21 +193,23 @@ nav ul{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.700);
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: large;
+    font-weight: bold;
 }
 
 .plan p:hover{
-    opacity: 1; transition: 2s;
+    opacity: 1;
+    transition: 1s;
 }
 
 /*アクセス*/
 .access{
     text-align: center;
-    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     font-size: 1.5vw;
 }
 

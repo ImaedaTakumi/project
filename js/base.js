@@ -49,7 +49,7 @@ function animation(){
     });
 }
 
-$(window).on('load scroll',function (){//ページがロードされたら
+$(window).on('load scroll',function (){//ページがロードかスクロールされたら
     animation()//アニメーション実行
 });
 
