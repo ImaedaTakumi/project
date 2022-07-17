@@ -56,4 +56,4 @@ else:
 		sensin.connection_MySQL(sql,"w","hotel")
 		print("Location:./add_success.cgi\n")
 	else:
-		sensin.htmlpage("../html/adduser.html",error)
+		sensin.htmlpage("../html/adduser.html",error=error)
