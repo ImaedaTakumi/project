@@ -20,14 +20,6 @@ $(window).on('load', function () {
     FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
 });
 
-/*スクロール*/
-function ScrollWindow(elem) {
-    var element = document.getElementById(elem);
-    var rect = element.getBoundingClientRect();
-    var elemtop = rect.top + window.pageYOffset;
-    document.documentElement.scrollTop = elemtop;
-}
-
 /*アニメーション*/
 function animation(){
     $('.animation').each(function(){
@@ -59,4 +51,36 @@ $(window).on('load',function (){//ページがロードされたら
     setTimeout(() => {
         $('.animation_before4').addClass('active')//1900ms後に表示
     }, 1900)
+});
+
+/*自動スクロール*/
+$(".scroll_home").click(function () {
+    var position = $('#home').offset().top;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_about").click(function () {
+    var position = $('#about').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_dish").click(function () {
+    var position = $('#dish').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_institution").click(function () {
+    var position = $('#institution').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_plan").click(function () {
+    var position = $('#plan').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
+});
+$(".scroll_access").click(function () {
+    var position = $('#access').offset().top-90;//要素のy方向の位置を変数に代入
+    var speed = 600;//スクロールスピード
+    $("html,body").animate({scrollTop:position},speed);//スクロール実行
 });
