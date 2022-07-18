@@ -1,3 +1,4 @@
+#!/usr/bin/python3 --
 import cgi
 import MySQLdb
 import os
@@ -25,8 +26,8 @@ if cookielogin:
 else:
 	text.append("")
 
-hen = []
-sql = ""
+reservation_day = "2022-5-11"
+sql = "select * from Room as R where R.Room_plan_id = 1 and not exists(select * from (select * from Reservation where '{reservation_day}' between Lodging_start and Lodging_end) as Twhere R.Room_id = T.Room_id);"
 result = sensin.connection_MySQL(sql,"r","hotel")
-
-sensin.htmlpage()
+print("Content-Type: text/html\n")
+print(f"{result}")
