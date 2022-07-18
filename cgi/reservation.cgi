@@ -41,4 +41,5 @@ else:
 	if "" in text:
 		sensin.htmlpage("../html/reservation.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 	else:
+		#予約できる日付を渡す
 		sensin.htmlpage("../html/reservation_hotel.html",text=text)
