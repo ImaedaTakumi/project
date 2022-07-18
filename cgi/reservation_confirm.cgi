@@ -39,7 +39,6 @@ else:
 	day = form.getfirst("day")
 	adult = form.getfirst("adult")
 	child = form.getfirst("child")
-	room = form.getfirst("room")
 	food = form.getfirst("dish")
 	pay = form.getfirst("pay")
 	memo = form.getfirst("memo")
@@ -50,6 +49,17 @@ else:
 		#色々
 		# account情報取り出し
 		try:
+			reservation_day = day
+			sql = f"select (`Room_plan_id`) from Room_plan where `Room_plan_name` = '{plan}'"
+			plan_result = sensin.connection_MySQL(sql,"r","hotel")
+			room_plan_id = plan_result[0][0]
+
+			#予約したplan_idの部屋を検索
+			sql = f"select * from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
+			room_result = sensin.connection_MySQL(sql,"r","hotel")
+			room_id = room_result[0][0]
+			room_plan_id = room_result[0][1]
+
 			account_id = cookielogin[0]
 			sql = f"select (`Account_id`,`Credit_id`) from Account where Account_id = {account_id}"
 			account_result = sensin.connection_MySQL(sql,"r","hotel")
@@ -58,11 +68,6 @@ else:
 
 			sql = f"select (`Hotel_id`) from Hotel where `Hotel_id` = {hotel}"
 			hotel_id = sensin.connection_MySQL(sql,"r","hotel")
-
-			sql = f"select (`Room_id`, `Room_plan_id`) from Room where `Room_id` = {room}"
-			room_result = sensin.connection_MySQL(sql,"r","hotel")
-			room_id = room_result[0][0]
-			room_plan_id = room_result[0][1]
 
 			sql = f"select (`Price`) from Room_plan where `Room_plan_id` = {room_plan_id}"
 			room_price = sensin.connection_MySQL(sql,"r","hotel")
@@ -80,5 +85,5 @@ else:
 		
 			sql = "insert (`Reservation_id`,`Account_id`,`Hotel_id`,`Room_id`,`Room_plan_id`,`Food_id`,`Adult_num`,`Child_num`,`Lodging_start`,`Lodging_end`,`Payment_info`,`Payment_price`,`Credit_id`,`Memo`) "
 			sql += f"values (null,{account_id},{hotel_id},{room_id},{room_plan_id},{food_id},{adult},{child},{lodging_start},{lodging_end},{pay},{price},{credit_id},{memo})"
-		except:
-			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラー2です<br>"})
+		except Exception as e:
+			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":f"不明なエラー2です {e}<br>"})
