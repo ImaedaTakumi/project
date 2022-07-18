@@ -47,10 +47,15 @@ else:
 	text=[hotel,plan,day,adult,child,room,dish,pay,memo]
 
 	if "" in text:
-		#予約できる以下略
-		reservation_day = day
-		sql = "select * from Room as R where R.Room_plan_id = 1 and not exists(select * from (select * from Reservation where '{reservation_day}' between Lodging_start and Lodging_end) as Twhere R.Room_id = T.Room_id);"
-		sensin.connection_MySQL()
+		#全ての項目を入力していない場合
 		sensin.htmlpage("../html/reservation_hotel.html",text=[hotel,plan],error={"error":"全ての項目を入力してください<br>"})
 	else:
-		sensin.htmlpage("../html/reservation_confirm.html",text=text)
+		#全ての項目を入力した場合
+		#予約できるか判定
+		#reservation_day = day
+		#sql = ""
+		result = True
+		if result:
+			sensin.htmlpage("../html/reservation_confirm.html",text=text)
+		else:
+			sensin.htmlpage("../html/reservation_hotel.html",text=[hotel,plan],error={"error":"その時間帯は空いていませんでした<br>"})

@@ -26,8 +26,17 @@ if cookielogin:
 else:
 	text.append("")
 
+room_plan_id = 1
 reservation_day = "2022-5-11"
-sql = "select * from Room as R where R.Room_plan_id = 1 and not exists(select * from (select * from Reservation where '{reservation_day}' between Lodging_start and Lodging_end) as Twhere R.Room_id = T.Room_id);"
+sql = f"select * from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
 result = sensin.connection_MySQL(sql,"r","hotel")
 print("Content-Type: text/html\n")
+print("""
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>sqltest</title>
+</head>
+""")
 print(f"{result}")
