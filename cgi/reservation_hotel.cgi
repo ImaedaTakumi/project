@@ -40,7 +40,6 @@ else:
 	day = form.getfirst("day")
 	adult = form.getfirst("adult")
 	child = form.getfirst("child")
-	room = form.getfirst("room")
 	dish = form.getfirst("dish")
 	pay = form.getfirst("pay")
 	memo = form.getfirst("memo")
@@ -54,9 +53,9 @@ else:
 		#予約できるか判定
 		try:
 			reservation_day = day
-			sql = f"select (`Room_plan_id`) from Room_plan where `Room_plan_name` = '{room}'"
-			room_result = sensin.connection_MySQL(sql,"r","hotel")
-			room_plan_id = room_result[0][0]
+			sql = f"select (`Room_plan_id`) from Room_plan where `Room_plan_name` = '{plan}'"
+			plan_result = sensin.connection_MySQL(sql,"r","hotel")
+			room_plan_id = plan_result[0][0]
 
 			sql = f"select * from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
 			result = sensin.connection_MySQL(sql,"r","hotel")
