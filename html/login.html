@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <title>Login</title>
 <link rel="stylesheet" href="../css/base.css">
+<style>
+    body{
+    font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+    background-image: url("../img/background_img2.png");
+    }
+</style>
 </head>
 <body>
     <header class="header">
@@ -17,19 +23,24 @@
                 <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
                 <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
                 <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
+                {0[0]}
             </ul>
         </nav>
     </header>
 <br>
-<form action="login.cgi" method="post">
-<p>メールアドレス</p>
-<input name="mail_address" type="email">
-<p>パスワード</p>
-<input name="password" type="password">
-<button type="submit">ログイン</button>
-</form>
-<br>
-<a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
+<div class = "login">
+    <form action="login.cgi" method="post">
+        <img src="../img/logo2.png">
+        <h1>ログインページ</h1>
+        <p>メールアドレス</p>
+        <input name="mail_address" type="email">
+        <p>パスワード</p>
+        <input name="password" type="password"><br><br>
+        <button type="submit">ログイン</button>
+    </form>
+    <br>
+    <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>
