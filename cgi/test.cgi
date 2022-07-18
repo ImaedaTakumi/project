@@ -148,3 +148,27 @@ else:
 	cnt = cookie.output()
 	htmlText=f"今入力したやつ{cnt}" 
 	print(htmlText.encode("utf-8", 'ignore').decode('utf-8'))
+
+	"""
+	insert into Hotel (`Hotel_id`,`Hotel_name`,`Place_name`) values (null,'片倉','東京都八王子市倉片町1111-1');
+	insert into Room_plan (`Room_plan_id`,`Room_plan_name`,`Max_number`,`Price`) values (null,'ベーシックプラン',2,20000);
+	insert into Room_plan (`Room_plan_id`,`Room_plan_name`,`Max_number`,`Price`) values (null,'紅葉プラン',4,40000);
+	insert into Room_plan (`Room_plan_id`,`Room_plan_name`,`Max_number`,`Price`) values (null,'団体プラン',15,100000);
+	insert into Room (`Room_id`,`Hotel_id`,`Room_plan_id`,`Room_name`,`Canchild`) values (null,1,1,'101号室',1);
+	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理1',280);
+	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理2',380);
+	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理3',480);
+	insert into Food (`Food_id`,`Food_name`,`Price`) values (null,'お料理4',580);
+	
+	replace into Session (`Session_id`,`Session_key`,`Account_id`) values (null,"cat2",1);
+	merge into Session as A
+	using (select 1 as S_id, "cat" as key,1 as A_id) as B
+	on(A.Session_id = B.S_id)
+	when matched then 
+	update set `Session_key` = "334"
+	when not matched then
+	insert (`Session_id`,`Session_key`,`Account_id`) values (null,"cat2",1);
+
+	"""
+
+

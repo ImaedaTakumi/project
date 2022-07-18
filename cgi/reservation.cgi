@@ -12,13 +12,12 @@ form = cgi.FieldStorage()
 # reading cookie
 cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
 try:
-	session_id = cookie["session_id"].value
+	session_key = cookie["session_key"].value
 except KeyError:
-	session_id = ""
+	session_key = ""
 	
-sql = "select `session_id` from Session where session_id = '"+session_id+"'"
+sql = f"select `session_id` from Session where session_key = '{session_key}'"
 cookielogin = sensin.connection_MySQL(sql,"r","hotel")
-
 
 if cookielogin:
 	#cookie login sucsess
@@ -29,7 +28,7 @@ else:
 if form.list == []:
 	#GET
 	#getで来たらreservation.html
-	sensin.htmlpage("../html/reservation.html")
+	sensin.htmlpage("../html/reservation.html",text=text)
 else:
 	#POST
 	# 色々判定できる
@@ -37,9 +36,9 @@ else:
 	hotel = form.getfirst("hotel")
 	plan = form.getfirst("plan")
 
-	text=[hotel,plan]
+	text.extend([hotel,plan])
 
 	if "" in text:
-		sensin.htmlpage("../html/reservation.html",error={"error":"全ての項目を入力してください"})
+		sensin.htmlpage("../html/reservation.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 	else:
 		sensin.htmlpage("../html/reservation_hotel.html",text=text)

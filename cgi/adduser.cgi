@@ -25,24 +25,24 @@ if form.list == []:
 else:
 	#POST
 	if not mail_address:
-		error["mail_address"] = "メールアドレスを入力してください"
+		error["mail_address"] = "メールアドレスを入力してください<br>"
 	if not password:
-		error["password"] = "パスワードを入力してください"
+		error["password"] = "パスワードを入力してください<br>"
 	if not (password == password_conf):
-		error["password"] = "パスワードが一致しません"
+		error["password"] = "パスワードが一致しません<br>"
 		
 	if not user_name:
-		error["user_name"] = "氏名を入力してください"
+		error["user_name"] = "氏名を入力してください<br>"
 	if not home_address:
-		error["home_address"] = "住所を入力してください"
+		error["home_address"] = "住所を入力してください<br>"
 	if not gender:
-		error["gender"] = "性別を選択してください"
+		error["gender"] = "性別を選択してください<br>"
 	if not birthday:
-		error["birthday"] = "生年月日を選択してください"
+		error["birthday"] = "生年月日を選択してください<br>"
 	if not credit_id:
 		credit_id = "Null"
 	elif credit_id.isdigit():
-		error["creditID"] = "クレジットカードIDには数字のみを入力してください"
+		error["creditID"] = "クレジットカードIDには数字のみを入力してください<br>"
 		
 
 	#一つも入力漏れがない時
@@ -56,4 +56,4 @@ else:
 		sensin.connection_MySQL(sql,"w","hotel")
 		print("Location:./add_success.cgi\n")
 	else:
-		sensin.htmlpage("../html/adduser.html",error)
+		sensin.htmlpage("../html/adduser.html",error=error)
