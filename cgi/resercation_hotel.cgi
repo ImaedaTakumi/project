@@ -4,6 +4,7 @@ import MySQLdb
 import os
 from http import cookies
 import sensin
+import datetime
 
 ### main program ###
 text = []
@@ -47,6 +48,9 @@ else:
 
 	if "" in text:
 		#予約できる以下略
+		reservation_day = day
+		sql = "select * from Room as R where R.Room_plan_id = 1 and not exists(select * from (select * from Reservation where '{reservation_day}' between Lodging_start and Lodging_end) as Twhere R.Room_id = T.Room_id);"
+		sensin.connection_MySQL()
 		sensin.htmlpage("../html/reservation_hotel.html",text=[hotel,plan],error={"error":"全ての項目を入力してください<br>"})
 	else:
 		sensin.htmlpage("../html/reservation_confirm.html",text=text)
