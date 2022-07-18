@@ -37,7 +37,7 @@ if cookielogin:
 		day = form.getfirst("day")
 		adult = form.getfirst("adult")
 		child = form.getfirst("child")
-		dish = form.getfirst("dish")
+		food = form.getfirst("food")
 		pay = form.getfirst("pay")
 		memo = form.getfirst("memo")
 		text.extend([hotel,plan])
@@ -60,7 +60,7 @@ if cookielogin:
 
 				if result:
 					#成功画面を表示
-					text.extend([day,adult,child,dish,pay,memo])
+					text.extend([day,adult,child,food,pay,memo])
 					sensin.htmlpage("../html/reservation_confirm.html",text=text)
 				else:
 					sensin.htmlpage("../html/reservation_hotel.html",text=text,error={"error":"その時間帯は空いていませんでした<br>"})
