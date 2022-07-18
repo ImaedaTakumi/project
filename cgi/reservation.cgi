@@ -40,10 +40,13 @@ if cookielogin:
 			sensin.htmlpage("../html/reservation.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 		else:
 			#予約できる日付を渡す
-			datenow = datetime.date.today()
-			for i in range(1,31):
-				days = datetime.date()
-			sql = ""
+			#今日から30日後までの日付
+			today = datetime.date.today()
+			for i in range(1,30):
+				daydelta = datetime.timedelta(i)
+				date = today + daydelta
+
+			
 			sensin.htmlpage("../html/reservation_hotel.html",text=text)
 else:
 	# login failed
