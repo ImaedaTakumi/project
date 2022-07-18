@@ -45,7 +45,6 @@ if cookielogin:
 			for i in range(1,30):
 				daydelta = datetime.timedelta(i)
 				date = today + daydelta
-
 			
 			sensin.htmlpage("../html/reservation_hotel.html",text=text)
 else:
