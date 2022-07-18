@@ -213,8 +213,29 @@ nav ul{
     font-size: 1.5vw;
 }
 
+/*予約*/
+.reservation{
+    text-align:  center;
+	table-layout: fixed;
+	width: 80%;
+	margin: 0 auto 20px;
+    border: 1px solid #ccc;
+    color: rgb(0, 0, 0);
+	padding: 10px 15px;
+	word-break: break-all;
+}
+
+.line{
+    display: flex;
+}
+
 /*予約成功*/
 .reservation_success{
+    text-align: center;
+}
+
+/*予約確認*/
+.reservation_confilm{
     text-align: center;
 }
 
@@ -229,6 +250,18 @@ nav ul{
 	padding: 10px 15px;
 	word-break: break-all;
     background-image: url(../img/background_img2.png);
+}
+
+/*会員登録*/
+.adduser{
+    text-align:  center;
+	table-layout: fixed;
+	width: 80%;
+	margin: 0 auto 20px;
+    border: 1px solid #ccc;
+    color: rgb(0, 0, 0);
+	padding: 10px 15px;
+	word-break: break-all;
 }
 
 /*フッター*/

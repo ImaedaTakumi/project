@@ -21,28 +21,30 @@
             </ul>
         </nav>
     </header>
-<form action="reservation_.html" >
-<p>日時</p>
-<input type="date" name="day">
-<p>大人</p>
-<input type="number" name="adult">
-<p>小人</p>
-<input type="number" name="child">
-<p>部屋</p>
+<form class = "reservation" action="reservation_.html" >
+    <h1>ホテル予約</h1>
+    <h4>
+    <p>日時</p>
+    <input type="date" name="day">
+    <p>大人</p>
+    <input type="number" name="adult">
+    <p>小人</p>
+    <input type="number" name="child">
+    <p>部屋</p>
 
-<p>お食事</p>
-<input type="radio" name="dish">お料理A
-<input type="radio" name="dish">お料理B
-<input type="radio" name="dish">お料理C
-<input type="radio" name="dish">お料理D
-<p>お支払い方法の確認</p>
-<input type="radio" name="pay">現金
-<input type="radio" name="pay">クレジット
-<p>お問い合わせ</p>
-<textarea name="memo" rows="10"></textarea>
-<input type="hidden" name="hotel" value = "{0[1]}">
-<input type="hidden" name="plan" value = "{0[2]}">
-<button type="submit">予約情報の確定</button>
+    <p>お食事</p>
+    <input type="radio" name="dish">お料理A
+    <input type="radio" name="dish">お料理B
+    <input type="radio" name="dish">お料理C
+    <input type="radio" name="dish">お料理D
+    <p>お支払い方法の確認</p>
+    <input type="radio" name="pay">現金
+    <input type="radio" name="pay">クレジット
+    <p>お問い合わせ</p>
+    <textarea name="memo" rows="10"></textarea>
+    <input type="hidden" name="hotel" value = "{0[1]}">
+    <input type="hidden" name="plan" value = "{0[2]}">
+    <button type="submit">予約情報の確定</button>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>

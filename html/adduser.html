@@ -21,29 +21,33 @@
             </ul>
         </nav>
     </header>
-<h1>会員登録</h1>
-<form action="adduser.cgi" method="post">
-<p>メールアドレス</p>
-<input name="mail_address" type="email">
-<p>パスワード</p>
-<input name="password" type="password">
-<p>パスワード再入力</p>
-<input name="password_conf" type="password">
-<p>氏名</p>
-<input name="user_name" type="text">
-<p>住所</p>
-<input name="home_address" type="text">
-<p>性別</p>
-<input type="radio" name="gender" value="male">男性
-<input type="radio" name="gender" value="female">女性
-<p>生年月日</p>
-<input type="date" name="birthday">
-<p>creditID</p>
-<input type="text" name="creditID"><br><br>
-{1[0]}
-<button type="submit">アカウント作成</button>
-<button type="reset" value="リセット">リセット</button>
-</form>
+<div class = "adduser">
+    <h1>会員登録</h1>
+    <h4>
+    <form action="adduser.cgi" method="post">
+    <p>メールアドレス</p>
+    <input name="mail_address" type="email">
+    <p>パスワード</p>
+    <input name="password" type="password">
+    <p>パスワード再入力</p>
+    <input name="password_conf" type="password">
+    <p>氏名</p>
+    <input name="user_name" type="text">
+    <p>住所</p>
+    <input name="home_address" type="text">
+    <p>性別</p>
+    <input type="radio" name="gender" value="male">男性
+    <input type="radio" name="gender" value="female">女性
+    <p>生年月日</p>
+    <input type="date" name="birthday">
+    <p>creditID</p>
+    <input type="text" name="creditID"><br><br>
+    {1[0]}
+    <button type="submit">アカウント作成</button>
+    <button type="reset" value="リセット">リセット</button>
+    </form>
+    </h4>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
 </body>
