@@ -46,6 +46,7 @@ if cookielogin:
 			sql = ""
 			sensin.htmlpage("../html/reservation_hotel.html",text=text)
 else:
-	print("Location:../cgi/login.cgi")
+	# login failed
+	print("Location:../cgi/login.cgi\n")
 	
 
