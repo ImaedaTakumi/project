@@ -42,7 +42,7 @@ if cookielogin:
 		memo = form.getfirst("memo")
 		text.extend([hotel,plan])
 
-		if "" in text:
+		if None in text or "" in text:
 			#全ての項目を入力していない場合
 			sensin.htmlpage("../html/reservation_hotel.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 		else:

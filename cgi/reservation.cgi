@@ -36,7 +36,7 @@ if cookielogin:
 
 		text.extend([hotel,plan])
 
-		if "" in text:
+		if None in text or "" in text:
 			sensin.htmlpage("../html/reservation.html",text=text,error={"error":"全ての項目を入力してください<br>"})
 		else:
 			#予約できる日付を渡す
