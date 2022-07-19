@@ -223,6 +223,26 @@ nav ul{
     display: flex;
 }
 
+/*ホテル予約*/
+.reservation_hotel{
+    text-align: center;
+}
+
+.confilm_button{
+    background: rgb(0, 0, 0);
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+}
+
+.confilm_button:hover{
+    background: #464646;
+}
+
 /*予約成功*/
 .reservation_success{
     text-align: center;
