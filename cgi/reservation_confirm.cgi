@@ -1,5 +1,6 @@
 #!/usr/bin/python3 --
 import cgi
+from typing import Type
 import MySQLdb
 import os
 from http import cookies
@@ -62,6 +63,7 @@ if cookielogin:
 				room_plan_id = plan_result[0][0]
 
 				#予約したplan_idの部屋を検索
+				reservation_day = day
 				sql = f"select `Room_id`,`Room_plan_id` from Room as R where R.Room_plan_id = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between Lodging_start and Lodging_end) as T where R.Room_id = T.Room_id);"
 				room_result = sensin.connection_MySQL(sql,"r","hotel")
 				room_id = room_result[0][0]
@@ -86,8 +88,10 @@ if cookielogin:
 				lodging_end = day
 
 				# 予約情報修正
-				if credit_id == None:
-					credit_id = ""
+				if memo == None:
+					memo = ""
+					raise TypeError("cat")
+				
 				# 予約情報書き込み
 			
 				sql = "insert into Reservation (`Reservation_id`,`Account_id`,`Hotel_id`,`Room_id`,`Room_plan_id`,`Food_id`,`Adult_num`,`Child_num`,`Lodging_start`,`Lodging_end`,`Payment_info`,`Payment_price`,`Credit_id`,`Memo`)"
