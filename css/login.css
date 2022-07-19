@@ -68,6 +68,31 @@ nav ul{
     outline: none;
 }
 
+.login_button{
+    background: gray;
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.login_button:hover{
+    background: #464646;
+}
+
+.login a{
+    color: white;
+}
+
+.login a:hover{
+    color: gray;
+}
+
 /*フッター*/
 .copyright{
     text-align: center;

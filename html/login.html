@@ -24,15 +24,13 @@
 <div class = "login">
     <form class = "login_form" action="login.cgi" method="post">
         <img src="../img/logo2.png">
-        <h1>ログインページ</h1>
-        <p>メールアドレス</p>
+        <h1>ログイン</h1>
         <input name="mail_address" type="email" placeholder="Email Address">
-        <p>パスワード</p>
         <input name="password" type="password" placeholder="Password"><br><br>
         {1[mail_address]}
         {1[password]}
         {1[error]}
-        <button class = "button" type="submit">ログイン</button>
+        <button class = "login_button" type="submit">ログイン</button>
     </form>
     <br>
     <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
