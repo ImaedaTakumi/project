@@ -2,6 +2,7 @@ body{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     background-image: url("../img/background_img.jpg");
 }
+
 /*----------------------------
 タグheader, li, ul, ul liは
 https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
@@ -237,19 +238,6 @@ nav ul{
 /*予約確認*/
 .reservation_confilm{
     text-align: center;
-}
-
-/*ログイン*/
-.login{
-    text-align:  center;
-	table-layout: fixed;
-	width: 80%;
-	margin: 0 auto 20px;
-    border: 1px solid #ccc;
-    color: rgb(255, 255, 255);
-	padding: 10px 15px;
-	word-break: break-all;
-    background-image: url(../img/background_img2.png);
 }
 
 /*会員登録*/
