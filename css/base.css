@@ -233,6 +233,21 @@ nav ul{
     text-align: center;
 }
 
+.confilm_button{
+    background: rgb(0, 0, 0);
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+}
+
+.confilm_button:hover{
+    background: #464646;
+}
+
 /*会員登録*/
 .adduser{
     text-align:  center;
