@@ -1,87 +1,62 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>Reservation</title>
-<link rel="stylesheet" href="../css/base.css">
-</head>
-<body>
-    <!--見えるヘッダー--> 
-    <header class="abs_header">
-        <nav>
-            <ul>
-                <li><a class="abs_a scroll_home" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
-                <li><a class="abs_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="abs_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="abs_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="abs_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="abs_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="abs_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="abs_a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-    <!--途中から出てくるヘッダー-->
-    <header class="rel_header">
-        <nav>
-            <ul>
-                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
-                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--途中から出てくるヘッダー-->
-    <header class="rel_header">
-        <nav>
-            <ul>
-                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
-                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-<p>ご予約情報の確認</p>
-<!-- ^p^ -->
-<p>日時</p>
-<p>大人</p>
-<p>小人</p>
-<p>部屋</p>
+    <html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Reservation</title>
+        <link rel="stylesheet" href="../css/base.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a class="a" href="../cgi/homepage.cgi?#home"><img src="../img/logo2.png" width = 50px></a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#about">旅館について</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#dish">料理</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#institution">施設</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#plan">プラン</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
+                    <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
+                    <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
+                    {0[0]}
+                </ul>
+            </nav>
+        </header>
+        <div class = "reservation_confilm">
+            <h1>
+                <p>ご予約情報の確認</p>
+            </h1>
+            <h2>
+            <!-- ^p^ -->
+                <p>日時</p>
+                <p>大人</p>
+                <p>小人</p>
+                <p>部屋</p>
 
-        <p>お食事</p>
-        <p>お支払い方法の確認</p>
-        <p>部屋</p>
-        <p>お食事</p>
-        <p>お支払い方法の確認</p>
-        <p>お問い合わせ</p>
-    </h2>
-</div>
-
-<form action="../cgi/reservation_confirm.cgi"></form>
-<input type="hidden" name="hotel" value = "{0[1]}">
-<input type="hidden" name="plan" value = "{0[2]}">
-<input type="hidden" name="day" value = "{0[3]}">
-<input type="hidden" name="adult" value = "{0[4]}">
-<input type="hidden" name="child" value = "{0[5]}">
-<input type="hidden" name="room" value = "{0[6]}">
-<input type="hidden" name="dish" value = "{0[7]}">
-<input type="hidden" name="pay" value = "{0[8]}">
-<input type="hidden" name="memo" value = "{0[9]}">
-<button type="submit">予約情報の送信</button>
-</form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/base.js" async></script>
-</body>
+                <p>お食事</p>
+                <p>お支払い方法の確認</p>
+                <p>部屋</p>
+                <p>お食事</p>
+                <p>お支払い方法の確認</p>
+                <p>お問い合わせ</p>
+            </h2>
+            <form action="../cgi/reservation_confirm.cgi"></form>
+                <input type="hidden" name="hotel" value = "{0[1]}">
+                <input type="hidden" name="plan" value = "{0[2]}">
+                <input type="hidden" name="day" value = "{0[3]}">
+                <input type="hidden" name="adult" value = "{0[4]}">
+                <input type="hidden" name="child" value = "{0[5]}">
+                <input type="hidden" name="room" value = "{0[6]}">
+                <input type="hidden" name="dish" value = "{0[7]}">
+                <input type="hidden" name="pay" value = "{0[8]}">
+                <input type="hidden" name="memo" value = "{0[9]}">
+            <button class = "confilm_button" type="submit">予約情報の送信</button>
+            </form>
+        </div>
+        <br>
+        <footer>
+            <p class="copyright">&copy; 2022kurakata </p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../js/base.js" async></script>
+    </body>
 </html>

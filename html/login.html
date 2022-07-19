@@ -21,18 +21,19 @@
             </ul>
         </nav>
     </header>
-<div class = "login">
-        <img src="../img/logo2.png">
-        <input name="mail_address" type="email" placeholder="Email Address">
-        <input name="password" type="password" placeholder="Password"><br><br>
-        {1[mail_address]}
-        {1[password]}
-        {1[error]}
-        <button class = "login_button" type="submit">ログイン</button>
-    </form>
-    <br>
-    <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
-</div>
+    <div class = "login">
+        <form class = "login_form" action="login.cgi" method="post">
+            <img src="../img/logo2.png">
+            <input name="mail_address" type="email" placeholder="Email Address">
+            <input name="password" type="password" placeholder="Password"><br><br>
+            {1[mail_address]}
+            {1[password]}
+            {1[error]}
+            <button class = "login_button" type="submit">ログイン</button>
+        </form>
+        <br>
+        <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
+    </div>
 <footer>
     <p class="copyright">&copy; 2022kurakata </p>
 </footer>
