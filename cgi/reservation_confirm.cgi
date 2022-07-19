@@ -54,8 +54,9 @@ if cookielogin:
 				credit_id = account_result[0][1]
 
 				sql = f"select `Hotel_id` from Hotel where Hotel_name = '{hotel}'"
-				hotel_id = sensin.connection_MySQL(sql,"r","hotel")
-				reservation_day = day
+				hotel_result = sensin.connection_MySQL(sql,"r","hotel")
+				hotel_id = hotel_result[0][0]
+
 				sql = f"select `Room_plan_id` from Room_plan where Room_plan_name = '{plan}'"
 				plan_result = sensin.connection_MySQL(sql,"r","hotel")
 				room_plan_id = plan_result[0][0]
@@ -67,7 +68,8 @@ if cookielogin:
 				room_plan_id = room_result[0][1]
 
 				sql = f"select `Price` from Room_plan where `Room_plan_id` = {room_plan_id}"
-				room_price = sensin.connection_MySQL(sql,"r","hotel")[0][0]
+				room_price_result = sensin.connection_MySQL(sql,"r","hotel")
+				room_price = room_price_result[0][0]
 
 				sql = f"select `Food_id`,`Price` from Food where `Food_name` = '{food}'"
 				food_result = sensin.connection_MySQL(sql,"r","hotel")
