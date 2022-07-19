@@ -82,9 +82,13 @@ if cookielogin:
 				price = (room_price + food_price)
 				lodging_start = day
 				lodging_end = day
+
+				# 予約情報修正
+				if credit_id == None:
+					credit_id = ""
 				# 予約情報書き込み
 			
-				sql = "insert `Reservation_id`,`Account_id`,`Hotel_id`,`Room_id`,`Room_plan_id`,`Food_id`,`Adult_num`,`Child_num`,`Lodging_start`,`Lodging_end`,`Payment_info`,`Payment_price`,`Credit_id`,`Memo` "
+				sql = "insert into Reservation (`Reservation_id`,`Account_id`,`Hotel_id`,`Room_id`,`Room_plan_id`,`Food_id`,`Adult_num`,`Child_num`,`Lodging_start`,`Lodging_end`,`Payment_info`,`Payment_price`,`Credit_id`,`Memo`)"
 				sql += f"values (null,{account_id},{hotel_id},{room_id},{room_plan_id},{food_id},{adult},{child},'{lodging_start}','{lodging_end}',{pay_info},{price},{credit_id},'{memo}')"
 				sensin.connection_MySQL(sql,"r","hotel")
 
