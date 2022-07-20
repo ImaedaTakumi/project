@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>Reservation</title>
-<link rel="stylesheet" href="../css/base.css">
-</head>
-<body>
-    <!--見えるヘッダー-->
-    <header class="abs_header">
-        <nav>
-            <ul>
-                <li><a class="a" href="../cgi/homepage.cgi?#home"><img src="../img/logo2.png" width = 50px></a></li>
-                <li><a class="a" href="../cgi/homepage.cgi?#about">旅館について</a></li>
-                <li><a class="a" href="../cgi/homepage.cgi?#dish">料理</a></li>
-                <li><a class="a" href="../cgi/homepage.cgi?#institution">施設</a></li>
-                <li><a class="a" href="../cgi/homepage.cgi?#plan">プラン</a></li>
-                <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
-                <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-    <header class="rel_header">
-        <nav>
-            <ul>
-                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
-                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-
-<form class = "reservation" action="../cgi/reservation_hotel.cgi" method="post">
-<p>日時</p>
-<input type="date" name="day">
-<p>大人</p>
-<input type="number" name="adult" value="0">
-<p>小人</p>
-<input type="number" name="child" value="0">
-<p>部屋</p>
-
-<p>お食事</p>
-<input type="radio" name="food" value="お料理A">お料理A
-<input type="radio" name="food" value="お料理B">お料理B
-<input type="radio" name="food" value="お料理C">お料理C
-<input type="radio" name="food" value="お料理D">お料理D
-<p>お支払い方法の確認</p>
-<input type="radio" name="pay" value="現金">現金
-<input type="radio" name="pay" value="クレジット">クレジット
-<p>お問い合わせ</p>
-<textarea name="memo" rows="10"></textarea><br>
-<input type="hidden" name="hotel" value = "{0[1]}">
-<input type="hidden" name="plan" value = "{0[2]}">
-{1[error]}
-<button type="submit">予約情報の確定</button>
-</form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/base.js" async></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Reservation</title>
+        <link rel="stylesheet" href="../css/base.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a class="a" href="../cgi/homepage.cgi?#home"><img src="../img/logo2.png" width = 50px></a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#about">旅館について</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#dish">料理</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#institution">施設</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#plan">プラン</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
+                    <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
+                    <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
+                    {0[0]}
+                </ul>
+            </nav>
+        </header>
+        <form class = "reservation_hotel" action="../cgi/resercation_hotel.cgi" method="post">
+            <h1>予約詳細</h1>
+            <h4>
+                <p>日時</p>
+                <input type="date" name="day">
+                <p>大人</p>
+                <input type="number" name="adult" value="0">
+                <p>小人</p>
+                <input type="number" name="child" value="0">
+                <p>お食事</p>
+                <input type="radio" name="dish" value="お料理A">お料理A
+                <input type="radio" name="dish" value="お料理B">お料理B
+                <input type="radio" name="dish" value="お料理C">お料理C
+                <input type="radio" name="dish" value="お料理D">お料理D
+                <p>お支払い方法の確認</p>
+                <input type="radio" name="pay" value="現金">現金
+                <input type="radio" name="pay" value="クレジット">クレジット
+                <p>お問い合わせ</p>
+                <textarea name="memo" rows="10"></textarea>
+                <input type="hidden" name="hotel" value = "{0[1]}">
+                <input type="hidden" name="plan" value = "{0[2]}">
+                <br>
+                <button type="submit">予約情報の確定</button>
+            </h4>
+        </form>
+        <footer>
+            <p class="copyright">&copy; 2022kurakata </p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../js/base.js" async></script>
+    </body>
 </html>

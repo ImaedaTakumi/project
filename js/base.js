@@ -1,7 +1,7 @@
 /*https://coco-factory.jp/ugokuweb/move01/5-1-5/から引用*/
 //スクロールすると上部に固定させるための設定を関数でまとめる
 function FixedAnime() {
-    var headerH = 1000;
+    var headerH = 900;
     var scroll = $(window).scrollTop();
     if (scroll >= headerH){//headerの高さ以上になったら
             $('.rel_header').addClass('is-show');//fixedというクラス名を付与

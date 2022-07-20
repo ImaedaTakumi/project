@@ -2,6 +2,7 @@ body{
     font-family: “HGP行書体”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
     background-image: url("../img/background_img.jpg");
 }
+
 /*----------------------------
 タグheader, li, ul, ul liは
 https://coeure.co.jp/blog/homepage/homepage_180501_05からの引用
@@ -152,7 +153,7 @@ nav ul{
     vertical-align: -10px;
 }
 
-/*料理 施設 プラン*/
+/*料理 施設 プラン 予約*/
 .img_table h1{
     text-align: center;
     font-size: 4vw;
@@ -198,7 +199,7 @@ nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: large;
+    font-size: 2vw;
     font-weight: bold;
 }
 
@@ -214,19 +215,32 @@ nav ul{
 }
 
 /*予約*/
-.reservation{
-    text-align:  center;
-	table-layout: fixed;
-	width: 80%;
-	margin: 0 auto 20px;
-    border: 1px solid #ccc;
-    color: rgb(0, 0, 0);
-	padding: 10px 15px;
-	word-break: break-all;
+.reservation_h1{
+    text-align: center;
 }
 
 .line{
     display: flex;
+}
+
+/*ホテル予約*/
+.reservation_hotel{
+    text-align: center;
+}
+
+.confilm_button{
+    background: rgb(0, 0, 0);
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+}
+
+.confilm_button:hover{
+    background: #464646;
 }
 
 /*予約成功*/
@@ -239,17 +253,19 @@ nav ul{
     text-align: center;
 }
 
-/*ログイン*/
-.login{
-    text-align:  center;
-	table-layout: fixed;
-	width: 80%;
-	margin: 0 auto 20px;
-    border: 1px solid #ccc;
-    color: rgb(255, 255, 255);
-	padding: 10px 15px;
-	word-break: break-all;
-    background-image: url(../img/background_img2.png);
+.confilm_button{
+    background: rgb(0, 0, 0);
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+}
+
+.confilm_button:hover{
+    background: #464646;
 }
 
 /*会員登録*/
@@ -262,6 +278,11 @@ nav ul{
     color: rgb(0, 0, 0);
 	padding: 10px 15px;
 	word-break: break-all;
+}
+
+/*ログイン アカウント作成成功*/
+.success{
+    text-align:  center;
 }
 
 /*フッター*/
