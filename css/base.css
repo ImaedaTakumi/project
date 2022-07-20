@@ -18,7 +18,7 @@ positionをabsoluteからflexに変更
     background-color: rgba(0, 0, 0, 100);
     width: 100%;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .abs_header{
@@ -31,7 +31,7 @@ positionをabsoluteからflexに変更
     background-color: rgba(255, 255, 255, 0);
     width: 100%;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .abs_success{
@@ -44,7 +44,7 @@ positionをabsoluteからflexに変更
     background-color: rgba(255, 255, 255, 0);
     width: 100%;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .rel_header{
@@ -85,6 +85,7 @@ nav ul{
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding:20px;
+    
 }
 
 .a{
