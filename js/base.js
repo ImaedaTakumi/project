@@ -84,20 +84,3 @@ $(".scroll_access").click(function () {
     var speed = 600;//スクロールスピード
     $("html,body").animate({scrollTop:position},speed);//スクロール実行
 });
-
-/*POST通信*/
-$(".post").click(function () {
-    var id = $(this).attr('id');//id取得
-    let f = document.createElement('form')
-    if (id == 'basic'){
-        f.innerHTML = '<input name="plan" value="ベーシックプラン">'
-    }
-    if (id == 'momiji'){
-        f.innerHTML = '<input name="plan" value="紅葉プラン">'
-    }
-    if (id == 'people'){
-        f.innerHTML = '<input name="plan" value="団体プラン">'
-    }
-    document.body.append(form);
-    form.submit();
-});
