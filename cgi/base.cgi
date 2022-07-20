@@ -13,12 +13,13 @@ try:
 	session_id = cookie["session_id"].value
 except KeyError:
 	session_id = ""
-	
+text = []
 sql = "select `session_id` from Session where session_id = '"+session_id+"'"
 cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
-	sensin.htmlpage("../html/dish.html",text=["<li><a>ログイン中</a></li>"])
+	text.append("<li><a class='success'>ログイン中</a></li>")
+	sensin.htmlpage("../html/dish.html",text=text)
 else:
 	sensin.htmlpage("../html/dish.html")

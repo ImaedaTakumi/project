@@ -4,6 +4,7 @@ import MySQLdb
 import os
 from http import cookies
 import sensin
+import datetime
 
 ### main program ###
 text = []
@@ -17,12 +18,12 @@ try:
 except KeyError:
 	session_key = ""
 	
-sql = f"select `session_id` from Session where session_key = '{session_key}'"
+sql = f"select `Account_id` from Session where Session_key = '{session_key}'"
 cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
-	text.append("<li><a>ログイン中</a></li>")
+	text.append("<li><a class='success'>ログイン中</a></li>")
 	if form.list == []:
 		#GET
 		#getで来たらreservation.html
