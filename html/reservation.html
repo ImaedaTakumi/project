@@ -23,29 +23,29 @@
         </header>
         <h1 class = "reservation_h1">予約プラン選択</h1>
     <h1 class = "reservation_h1">プランを選択してください</h1>
-    <form class = "img_table_parent" action="../cgi/reservation.cgi" method="post">
+    <form  action="../cgi/reservation.cgi" method="post">
         <input type="hidden" name="hotel" value="倉片">
+        <input type="radio" name="plan" value="ベーシックプラン">ベーシックプラン
+        <input type="radio" name="plan" value="紅葉プラン">紅葉プラン
+        <input type="radio" name="plan" value="団体プラン">団体プラン
+        <br>
+        <button type="submit">決定</button>
+        {1[error]}
+    </form>
+    <div class="img_table_parent">
         <div class = "plan">
-            <button type = "submit" name="plan" value = "ベーシックプラン"><img class = "img_table_child_t" src="../img/plan1.png"></button>
+            <img class = "img_table_child_t" src="../img/plan1.png">
             <p>ベーシックプラン<br>定員　2名<br>料金　28,000円<br>広さ　15㎡<br></p>
         </div>
         <div class = "plan">
-            <button type = "submit" name="plan" value = "紅葉プラン"  type = "submit"><img class = "img_table_child_t" src="../img/plan2.jpg"></button>
+            <img class = "img_table_child_t" src="../img/plan2.jpg">
             <p>紅葉プラン<br>定員　4名<br>料金　46,000円<br>広さ　36㎡</p>
         </div>
         <div class = "plan">
-            <button type = "submit" name="plan" value = "団体プラン"><img class = "img_table_child_t" src="../img/plan3.jpg"></button>
+            <img class = "img_table_child_t" src="../img/plan3.jpg">
             <p>団体プラン<br>定員　10~15名<br>料金　140,000円<br>広さ　75㎡</p>
         </div>
-        <!--
-        <input type="radio" name="plan" value="ベーシックプラン">ベーシックプラン
-        <input type="radio" name="plan" value="紅葉プラン">紅葉プラン
-        <input type="radio" name="plan" value="団体プラン">団体プラン\
-        <br><br>
-        <button type="submit">決定</button>
-        -->
-        {1[error]}
-    </form>
+    </div>
     <footer>
         <p class="copyright">&copy; 2022kurakata </p>
     </footer>
