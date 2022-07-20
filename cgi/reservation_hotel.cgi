@@ -81,6 +81,7 @@ if cookielogin:
 		food = form.getfirst("food")
 		pay = form.getfirst("pay")
 		memo = form.getfirst("memo")
+		
 		text.extend([hotel,plan])
 
 		if None in text or "" in text:
