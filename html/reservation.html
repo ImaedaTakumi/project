@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>Reservation</title>
-<link rel="stylesheet" href="../css/base.css">
-</head>
-<body>
-    <!--見えるヘッダー-->
-    <header class="abs_header">
-        <nav>
-            <ul>
-                <li><a class="abs_a scroll_home" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
-                <li><a class="abs_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="abs_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="abs_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="abs_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="abs_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="abs_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="abs_a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-    <!--途中から出てくるヘッダー-->
-    <header class="rel_header">
-        <nav>
-            <ul>
-                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
-                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
-                {0[0]}
-            </ul>
-        </nav>
-    </header>
-<form action="../cgi/reservation.cgi" method="post">
-<p>ホテル</p>
-<input type="radio" name="hotel" value="倉片">倉片
-<p>プラン</p>
-<input type="radio" name="plan" value="ベーシックプラン">ベーシックプラン
-<input type="radio" name="plan" value="紅葉プラン">紅葉プラン
-<input type="radio" name="plan" value="団体プラン">団体プラン
-<br><br>
-<button type="submit">決定</button>
-{1[error]}
-</form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../js/base.js" async></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Reservation</title>
+        <link rel="stylesheet" href="../css/base.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a class="a" href="../cgi/homepage.cgi?#home"><img src="../img/logo2.png" width = 50px></a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#about">旅館について</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#dish">料理</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#institution">施設</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#plan">プラン</a></li>
+                    <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
+                    <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
+                    <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
+                    {0[0]}
+                </ul>
+            </nav>
+        </header>
+        <h1 class = "reservation_h1">予約プラン選択</h1>
+    <h1 class = "reservation_h1">プランを選択してください</h1>
+    <form class = "img_table_parent" action="../cgi/reservation.cgi" method="post">
+        <input type="hidden" name="hotel" value="倉片">
+        <div class = "plan">
+            <button name="plan" value = "ベーシックプラン"><img class = "img_table_child_t" src="../img/plan1.png"></button>
+            <p>ベーシックプラン<br>定員　2名<br>料金　28,000円<br>広さ　15㎡<br></p>
+        </div>
+        <div class = "plan">
+            <button name="plan" value = "紅葉プラン"><img class = "img_table_child_t" src="../img/plan2.jpg"></button>
+            <p>紅葉プラン<br>定員　4名<br>料金　46,000円<br>広さ　36㎡</p>
+        </div>
+        <div class = "plan">
+            <button  name="plan" value = "団体プラン"><img class = "img_table_child_t" src="../img/plan3.jpg"></button>
+            <p>団体プラン<br>定員　10~15名<br>料金　140,000円<br>広さ　75㎡</p>
+        </div>
+        <!--
+        <input type="radio" name="plan" value="ベーシックプラン">ベーシックプラン
+        <input type="radio" name="plan" value="紅葉プラン">紅葉プラン
+        <input type="radio" name="plan" value="団体プラン">団体プラン\
+        <br><br>
+        <button type="submit">決定</button>
+        -->
+        {1[error]}
+    </form>
+    <footer>
+        <p class="copyright">&copy; 2022kurakata </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/base.js" async></script>
+    </body>
 </html>

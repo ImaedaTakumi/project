@@ -3,57 +3,37 @@
 <head>
 <meta charset="utf-8">
 <title>Login</title>
-<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <!--見えるヘッダー--> 
-    <header class="abs_header">
+    <header class="header">
         <nav>
             <ul>
-                <li><a class="abs_a scroll_home" href="../cgi/homepage.cgi"><img src="../img/logo2.png" width = 50px></a></li>
-                <li><a class="abs_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="abs_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="abs_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="abs_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="abs_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="abs_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="abs_a" href="../cgi/login.cgi">ログイン</a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#home"><img src="../img/logo2.png" width = 50px></a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#about">旅館について</a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#dish">料理</a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#institution">施設</a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#plan">プラン</a></li>
+                <li><a class="a" href="../cgi/homepage.cgi?#access">アクセス</a></li>
+                <li><a class="a" href="../cgi/reservation.cgi">予約</a></li>
+                <li><a class="a" href="../cgi/login.cgi">ログイン</a></li>
                 {0[0]}
             </ul>
         </nav>
     </header>
-    <!--途中から出てくるヘッダー-->
-    <header class="rel_header">
-        <nav>
-            <ul>
-                <li><a class="rel_a scroll_home" href="../cgi/homepage.cgi"><img id = "header_img" src="../img/logo1.png" width = 50px></a></li>
-                <li><a class="rel_a scroll_about" href="../cgi/homepage.cgi">旅館について</a></li>
-                <li><a class="rel_a scroll_dish" href="../cgi/homepage.cgi">料理</a></li>
-                <li><a class="rel_a scroll_institution" href="../cgi/homepage.cgi">施設</a></li>
-                <li><a class="rel_a scroll_plan" href="../cgi/homepage.cgi">プラン</a></li>
-                <li><a class="rel_a scroll_access" href="../cgi/homepage.cgi">アクセス</a></li>
-                <li><a class="rel_a" href="../cgi/reservation.cgi">予約</a></li>
-                <li><a class="rel_a" href="../cgi/login.cgi">ログイン</a></li>
-            </ul>
-        </nav>
-    </header>
-<br>
-<div class = "login">
-    <form action="login.cgi" method="post">
-        <img src="../img/logo2.png">
-        <h1>ログインページ</h1>
-        <p>メールアドレス</p>
-        <input name="mail_address" type="email">
-        <p>パスワード</p>
-        <input name="password" type="password"><br><br>
-        {1[mail_address]}
-        {1[password]}
-        {1[error]}
-        <button type="submit">ログイン</button>
-    </form>
-    <br>
-    <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
-</div>
+    <div class = "login">
+        <form class = "login_form" action="login.cgi" method="post">
+            <img src="../img/logo2.png">
+            <input name="mail_address" type="email" placeholder="Email Address">
+            <input name="password" type="password" placeholder="Password"><br><br>
+            {1[mail_address]}
+            {1[password]}
+            {1[error]}
+            <button class = "login_button" type="submit">ログイン</button>
+        </form>
+        <br>
+        <a href="adduser.cgi">アカウントをお持ちでない方はこちら</a>
+    </div>
 <footer>
     <p class="copyright">&copy; 2022kurakata </p>
 </footer>
