@@ -21,17 +21,15 @@
                 </ul>
             </nav>
         </header>
-        <form class = "reservation_hotel" action="../cgi/resercation_hotel.cgi">
+        <form class = "reservation_hotel" action="../cgi/resercation_hotel.cgi" method="post">
             <h1>予約詳細</h1>
             <h4>
                 <p>日時</p>
                 <input type="date" name="day">
                 <p>大人</p>
-                <input type="number" name="adult">
+                <input type="number" name="adult" value="0">
                 <p>小人</p>
-                <input type="number" name="child">
-                <p>部屋</p>
-
+                <input type="number" name="child" value="0">
                 <p>お食事</p>
                 <input type="radio" name="dish" value="お料理A">お料理A
                 <input type="radio" name="dish" value="お料理B">お料理B
