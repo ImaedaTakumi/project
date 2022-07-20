@@ -39,6 +39,17 @@ def htmlpage(page,text=[""],error={}):
 		for i,j in error.items():
 			data[i] = j
 		print(html.read().format(text,data))
+
+def read_cookie():
+	cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
+	try:
+		session_key = cookie["session_key"].value
+	except KeyError:
+		session_key = ""
+		
+	sql = f"select `Account_id` from Session where Session_key = '{session_key}'"
+	cookielogin = connection_MySQL(sql,"r","hotel")
+	return cookielogin
 		
 
 class CookieSession:

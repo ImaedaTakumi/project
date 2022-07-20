@@ -11,14 +11,7 @@ text = []
 error = {}
 form = cgi.FieldStorage()
 # reading cookie
-cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
-try:
-	session_key = cookie["session_key"].value
-except KeyError:
-	session_key = ""
-	
-sql = f"select `session_id` from Session where session_key = '{session_key}'"
-cookielogin = sensin.connection_MySQL(sql,"r","hotel")
+cookielogin = sensin.read_cookie()
 
 if cookielogin:
 	#cookie login sucsess
