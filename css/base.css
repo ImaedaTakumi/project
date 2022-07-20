@@ -34,6 +34,19 @@ positionをabsoluteからflexに変更
     z-index: 2;
 }
 
+.abs_success{
+    position: relative;
+    z-index: 10;
+    height: 90px;
+    display: flex;
+    top: 0px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
 .rel_header{
 	position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/

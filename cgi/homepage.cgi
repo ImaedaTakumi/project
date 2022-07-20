@@ -10,18 +10,11 @@ import sensin
 
 # reading cookie
 text = []
-cookie = cookies.SimpleCookie(os.environ.get('HTTP_COOKIE',''))
-try:
-	session_key = cookie["session_key"].value
-except KeyError:
-	session_key = ""
-	
-sql = f"select `Account_id` from Session where Session_key = '{session_key}'"
-cookielogin = sensin.connection_MySQL(sql,"r","hotel")
+cookielogin = sensin.read_cookie()
 
 if cookielogin:
 	#cookie login sucsess
-	text.append("<li><a class='success'>ログイン中</a></li>")
+	text.append("<li><a class='abs_success'>ログイン中</a></li>")
 else:
 	text.append("")
 
