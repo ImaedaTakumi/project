@@ -21,7 +21,7 @@ cookielogin = sensin.connection_MySQL(sql,"r","hotel")
 
 if cookielogin:
 	#cookie login sucsess
-	text.append("<li><a>ログイン中</a></li>")
+	text.append("<li><a class='success'>ログイン中</a></li>")
 else:
 	text.append("")
 
