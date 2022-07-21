@@ -96,6 +96,7 @@ if cookielogin:
 				sensin.connection_MySQL(sql,"w","hotel")
 
 				# 予約成功
+				text.append(price)
 				sensin.htmlpage("../html/reservation_success.html",text=text)
 			
 			except Exception as e:
