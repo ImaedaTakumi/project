@@ -3,7 +3,6 @@ import MySQLdb
 import random, string
 from collections import defaultdict
 from datetime import datetime
-#import MySQLdb
 import os ,json
 from http import cookies
 import hashlib
