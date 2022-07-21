@@ -91,4 +91,5 @@ $(window).on('load', function () {
     link.download = '';
     document.body.appendChild(link);
     link.click();
+    window.location.href = '../cgi/homepage.cgi';
 });
