@@ -30,15 +30,18 @@ if cookielogin:
 		day = form.getfirst("day")
 		adult = form.getfirst("adult")
 		child = form.getfirst("child")
+		room = form.getfirst("room")
 		food = form.getfirst("food")
 		pay = form.getfirst("pay")
 		memo = form.getfirst("memo")
-		text.extend([hotel,plan,day,adult,child,food,pay,memo])
+		#Noneになり得ない情報
+		test1 = [hotel,plan,day,adult,child,room,food,pay,memo]
+		#None含めた全情報
+		text.extend([hotel,plan,day,adult,child,room,food,pay,memo])
 
-		if None in text or "" in text:
+		if None in test1 or "" in test1:
 			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラーです<br>"})
 		else:
-			#色々
 			# account情報取り出し
 			try:
 				account_id = cookielogin[0][0]
@@ -93,6 +96,7 @@ if cookielogin:
 				sensin.connection_MySQL(sql,"w","hotel")
 
 				# 予約成功
+				text.append(price)
 				sensin.htmlpage("../html/reservation_success.html",text=text)
 			
 			except Exception as e:

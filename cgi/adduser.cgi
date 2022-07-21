@@ -4,8 +4,7 @@ import MySQLdb
 import random, string
 import sensin
 		
-### main program ###
-import crypt
+### main program ###Q
 error = {}
 form = cgi.FieldStorage()
 mail_address = form.getfirst('mail_address')
