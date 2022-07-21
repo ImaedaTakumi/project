@@ -299,6 +299,23 @@ nav ul{
     text-align:  center;
 }
 
+/*広告*/
+.advertisement{
+    text-align: center;
+    height: 5vh;
+    width: 100%;
+    font-weight: bold;
+    background : linear-gradient(to right,
+    red,
+    orange,
+    yellow,
+    green,
+    aqua,
+    blue,
+    purple);
+}
+
+
 /*フッター*/
 .copyright{
     text-align: center;
