@@ -34,12 +34,14 @@ if cookielogin:
 		food = form.getfirst("food")
 		pay = form.getfirst("pay")
 		memo = form.getfirst("memo")
+		#Noneになり得ない情報
+		test1 = [hotel,plan,day,adult,child,room,food,pay,memo]
+		#None含めた全情報
 		text.extend([hotel,plan,day,adult,child,room,food,pay,memo])
 
-		if None in text or "" in text:
+		if None in test1 or "" in test1:
 			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラーです<br>"})
 		else:
-			#色々
 			# account情報取り出し
 			try:
 				account_id = cookielogin[0][0]
