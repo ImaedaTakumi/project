@@ -35,16 +35,11 @@ positionをabsoluteからflexに変更
 }
 
 .abs_success{
-    position: relative;
-    z-index: 10;
-    height: 90px;
-    display: flex;
-    top: 0px;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0);
-    width: 100%;
-    text-align: center;
-    z-index: 3;
+    font-size: 1.5vw;
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
 }
 
 .rel_header{
