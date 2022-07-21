@@ -56,7 +56,7 @@ positionをabsoluteからflexに変更
 }
 
 .rel_header.is-show{
-    top: 0px;
+    top: 0px;/*is-showクラスが付加された場合に位置を0pxに変更*/
 }
 
 nav ul{
