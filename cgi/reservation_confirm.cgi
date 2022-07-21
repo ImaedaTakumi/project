@@ -30,10 +30,11 @@ if cookielogin:
 		day = form.getfirst("day")
 		adult = form.getfirst("adult")
 		child = form.getfirst("child")
+		room = form.getfirst("room")
 		food = form.getfirst("food")
 		pay = form.getfirst("pay")
 		memo = form.getfirst("memo")
-		text.extend([hotel,plan,day,adult,child,food,pay,memo])
+		text.extend([hotel,plan,day,adult,child,room,food,pay,memo])
 
 		if None in text or "" in text:
 			sensin.htmlpage("../html/reservation_confirm.html",text=text,error={"error":"不明なエラーです<br>"})
