@@ -51,10 +51,11 @@ if cookielogin:
 				#予約したplan_idの部屋を検索
 				sql = f"select * from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
 				result = sensin.connection_MySQL(sql,"r","hotel")
+				room = result[0][0]
 
 				if result:
 					#成功画面を表示
-					text.extend([day,adult,child,food,pay,memo])
+					text.extend([day,adult,room,child,food,pay,memo])
 					sensin.htmlpage("../html/reservation_confirm.html",text=text)
 				else:
 					sensin.htmlpage("../html/reservation_hotel.html",text=text,error={"error":"その時間帯は空いていませんでした<br>"})
