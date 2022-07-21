@@ -16,7 +16,8 @@ cookielogin = sensin.read_cookie()
 
 if cookielogin:
 	#cookie login sucsess
-	text.append("<li><a class='abs_success'>ログイン中</a></li>")
+	mail_address = cookielogin[0][0]
+	text.append(f"<li><a class='abs_success'>{mail_address}ログイン中</a></li>")
 	if form.list == []:
 		#GET
 		#getで来たらreservation.html
