@@ -49,7 +49,7 @@ if cookielogin:
 				room_plan_id = plan_result[0][0]
 				
 				#予約したplan_idの部屋を検索
-				sql = f"select * from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
+				sql = f"select `Room_id` from Room as R where R.`Room_plan_id` = {room_plan_id} and not exists(select * from (select * from Reservation where '{reservation_day}' between `Lodging_start` and `Lodging_end`) as T where R.`Room_id` = T.`Room_id`);"
 				result = sensin.connection_MySQL(sql,"r","hotel")
 				room = result[0][0]
 
