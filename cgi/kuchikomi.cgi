@@ -10,7 +10,8 @@ author = form.getfirst('author')
 article = form.getfirst('article')
 
 if(title is not None and author is not None and article is not None):
-	sql = "insert into `Kuchikomi` (`article_id`, `title`, `author`, `article_comment`) values (null, '" + title + "', '" + author + "', '" + article + "')"
+        sql = "insert into `Kuchikomi` (`article_id`, `title`, `author`, `article_comment`) values (null, '" + title + "', '" + author + "', '" + article + "')"
+        sensin.connection_MySQL(sql,"w","hotel")
 
 sql = "select * from Kuchikomi"
 kuchikomi_arr = sensin.connection_MySQL(sql, "r", "hotel")
