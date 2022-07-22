@@ -18,6 +18,6 @@ sensin.htmlpage("../html/kuchikomi.html")
 
 for kuchikomi in (reversed(kuchikomi_arr)):
         htmlText = '''
-        <div class = "kuchikomi"><strong>%s</strong><br><em>%s</em><br><br>%s</div><hr>
+        <div><h4>%s</h4><br><h5>%s</h5><br><br>%s</div><hr>
         '''%(kuchikomi[1], kuchikomi[2], kuchikomi[3])
         print(htmlText.encode("utf-8", 'ignore').decode('utf-8'))

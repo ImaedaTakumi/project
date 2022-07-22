@@ -277,15 +277,7 @@ nav ul{
     background: #464646;
 }
 /*口コミ*/
-.kuchikomi h1,p{
-    text-align:  center;
-}
-
-.kuchikomi strong{
-    text-align:  center;
-}
-
-.kuchikomi em{
+.kuchikomi h1,h3{
     text-align:  center;
 }
 
