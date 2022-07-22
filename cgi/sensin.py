@@ -46,7 +46,7 @@ def read_cookie():
 	except KeyError:
 		session_key = ""
 		
-	sql = f"select `Mail_address` from Account natural inner join Session where Session_key = '{session_key}'"
+	sql = f"select `Mail_address`, `Account_id` from Account natural inner join Session where Session_key = '{session_key}'"
 	cookielogin = connection_MySQL(sql,"r","hotel")
 	return cookielogin
 		

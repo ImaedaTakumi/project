@@ -45,7 +45,7 @@ if cookielogin:
 		else:
 			# account情報取り出し
 			try:
-				account_id = cookielogin[0][0]
+				account_id = cookielogin[0][1]
 				sql = f"select `Account_id`,`Credit_id` from Account where Account_id = {account_id}"
 				account_result = sensin.connection_MySQL(sql,"r","hotel")
 				account_id = account_result[0][0]
