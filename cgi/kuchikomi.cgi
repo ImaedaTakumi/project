@@ -13,7 +13,7 @@ if(title is not None and author is not None and article is not None):
 	sql = "insert into `Kuchikomi` (`article_id`, `title`, `author`, `article_comment`) values (null, '" + title + "', '" + author + "', '" + article + "')"
 
 sql = "select * from Kuchikomi"
-kuchikomi_arr = connection_MySQL(sql, "r", "hotel")
+kuchikomi_arr = sensin.connection_MySQL(sql, "r", "hotel")
 sensin.htmlpage("../html/kuchikomi.html")
 
 for kuchikomi in (reversed(kuchikomi_arr)):
