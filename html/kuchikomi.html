@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>Adduser</title>
+<title>Kuchikomi</title>
 <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
@@ -22,15 +22,15 @@
             </ul>
         </nav>
     </header>
-    <h1>口コミ掲示板</h1>
-    <p>旅館についての感想を書くページです</p>
-    <form action="../cgi/kuchikomi.cgi" method="post">
+    <form class = "kuchikomi" action="../cgi/kuchikomi.cgi" method="post">
+        <h1>口コミ掲示板</h1>
+        <p>旅館についての感想を書くページです</p>
         タイトル <input type="text" name="title" size="60"><br>
         ハンドルネーム <input type="text" name="author" size="20"><br>
         本文<br>
         <textarea cols="60" rows="5" name="article"></textarea><br>
         <input type="submit" value="送信">
-        <input type="reset" value="リセット">
+        <input type="reset" value="リセット"><hr>
     </form>   
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

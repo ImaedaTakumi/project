@@ -276,6 +276,18 @@ nav ul{
 .confilm_button:hover{
     background: #464646;
 }
+/*口コミ*/
+.kuchikomi h1,p{
+    text-align:  center;
+}
+
+.kuchikomi strong{
+    text-align:  center;
+}
+
+.kuchikomi em{
+    text-align:  center;
+}
 
 /*会員登録*/
 .adduser{
