@@ -22,6 +22,16 @@
             </ul>
         </nav>
     </header>
+    <h1>口コミ掲示板</h1>
+    <p>旅館についての感想を書くページです</p>
+    <form action="../cgi/kuchikomi.cgi" method="post">
+        タイトル <input type="text" name="title" size="60"><br>
+        ハンドルネーム <input type="text" name="author" size="20"><br>
+        本文<br>
+        <textarea cols="60" rows="5" name="text"></textarea><br>
+        <input type="submit" value="送信">
+        <input type="reset" value="リセット">
+    </form>   
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/base.js" async></script>
